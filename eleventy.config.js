@@ -4,7 +4,8 @@ module.exports = function (eleventyConfig) {
   // Rewrites root-relative URLs with the pathPrefix (GitHub Pages project site).
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-  // app-ads.txt must keep serving at /LexiMarketing/app-ads.txt (AdMob).
+  // app-ads.txt at the domain root is what AdMob's crawler actually checks
+  // (per the IAB spec it fetches <marketing-URL domain>/app-ads.txt).
   eleventyConfig.addPassthroughCopy({
     "src/css": "css", "src/img": "img", "src/app-ads.txt": "app-ads.txt",
   });
@@ -22,9 +23,9 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: { input: "src", includes: "_includes" },
-    // GitHub Pages serves this repo at /LexiMarketing/. If you later move to a
-    // custom domain, change this to "/" and site.url in src/_data/site.json.
-    pathPrefix: "/LexiMarketing/",
+    // Root domain (lexivocab.app via Cloudflare Pages). The old GitHub Pages
+    // deployment needed "/LexiMarketing/" here.
+    pathPrefix: "/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };

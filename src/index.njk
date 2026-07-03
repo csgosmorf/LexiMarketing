@@ -1,17 +1,58 @@
 ---
 layout: base.njk
-description: "Lexi teaches you vocabulary with real spaced repetition delivered through crossword puzzles generated just for you — with illustrated word cards for every new word. Free on iPhone and iPad."
+description: "Lexi runs real spaced repetition underneath crossword puzzles generated from the words you're learning. Fill-in-the-blank clues, illustrated word cards, automatic grading. Free on iPhone and iPad."
 ---
 <section class="hero">
-  <h1>Learn vocabulary that actually sticks — by solving crosswords built around the words you're learning.</h1>
-  <p class="lede">Flashcards work, but they're a chore. Lexi runs real spaced
-  repetition underneath dynamically generated crossword puzzles, so every
-  review is a puzzle clue instead of a card flip — and every word shows up in
-  a full sentence, in context, the way you'll actually meet it in the wild.</p>
+  <h1>Permanently expand your vocabulary — through crossword puzzles generated for you.</h1>
+  <p class="lede">Lexi runs real spaced repetition underneath dynamically
+  generated crosswords. Reviews are fill-in-the-blank sentences, not card
+  flips. Grading is inferred from your solve speed. And every new word is
+  introduced with an illustrated card <em>before</em> you're asked to recall
+  it.</p>
   <p>
     <a class="btn btn-big" href="{{ site.appstore }}">Download free on the App&nbsp;Store</a>
   </p>
   <p class="muted">iPhone &amp; iPad · free · no account required</p>
+</section>
+
+<section>
+  <h2>This is a review in Lexi</h2>
+  <div class="clue-demo">
+    <img src="/img/clue-quixotic-1.jpg" width="786" height="600" loading="lazy"
+         alt="A Lexi clue exactly as it appears in-game: 'Calling for a poetry truce in the middle of the bar fight was brave, if a bit [adj].' Hint: foolishly guided by noble ideals rather than practical reality.">
+    <div>
+      <p>A sentence with the word missing, plus a hint that evokes the
+      meaning. You retrieve <em>quixotic</em> from a situation — the way
+      you'll actually need it — with crossing letters as scaffolding when you
+      half-know it.</p>
+      <p>Every word cycles through multiple differently-phrased clues under
+      <strong>one</strong> spaced-repetition schedule. There is no fixed
+      phrasing to memorize, so what sticks is the word.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Why not flashcards?</h2>
+  <ul class="features">
+    <li><strong>Definition cards overfit.</strong> The prompt never changes, so you end up recognizing the definition's phrasing instead of commanding the word. Lexi varies the surface every repetition and keeps the schedule unified.</li>
+    <li><strong>Self-grading is decision fatigue.</strong> No Again/Hard/Good/Easy: your solve speed — normalized for clue and word length — raises or lowers each word's ease automatically.</li>
+    <li><strong>Cold first reps are brutal.</strong> Flashcards quiz you on words you've never seen. In Lexi, every first encounter starts with the word's illustrated card: image, definition, pictured example sentence, connotation tags.</li>
+    <li><strong>Clue quality can't be improvised.</strong> Each clue is produced by a creator → validator → guesser → reviser pipeline, up to seven revisions before acceptance — and keeps improving through in-app feedback.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What's inside</h2>
+  <ul class="features">
+    <li><strong>20,000 words</strong> ordered roughly by rarity — maximal real-world utility per unit time spent</li>
+    <li><strong>Synonym nuance:</strong> tap any two synonyms to read precisely how they differ</li>
+    <li><strong>Collections that steer generation:</strong> save words, and puzzles prioritize words with related meanings</li>
+    <li><strong>Multiplayer, leaderboards, streaks, achievements</strong>, an activity heat map</li>
+    <li><strong>Reminders fired from words actually due</strong>, not a fixed daily nag</li>
+    <li><strong>Profiles</strong> under one iCloud account — separate progress for you and your kid on the same iPad</li>
+    <li><strong>Typo detection:</strong> near-misses get a "likely a typo" toast, not a wrong answer</li>
+  </ul>
 </section>
 
 <section class="shots">
@@ -24,50 +65,11 @@ description: "Lexi teaches you vocabulary with real spaced repetition delivered 
 </section>
 
 <section>
-  <h2>How Lexi works</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>1. Meet each word properly</h3>
-      <p>Before a puzzle starts, every word you've never seen gets an
-      illustrated word card — picture, definition, an example sentence that
-      matches the picture, and connotation tags. No being blindsided by ten
-      unknown words in a grid.</p>
-    </div>
-    <div class="card">
-      <h3>2. Solve, don't flip</h3>
-      <p>Clues are full sentences with the target word missing — recall in
-      context, which is retrieval practice doing real work. Typo? Lexi notices
-      near-misses and tells you instead of marking you wrong.</p>
-    </div>
-    <div class="card">
-      <h3>3. The schedule runs itself</h3>
-      <p>Spaced repetition decides which words appear in your next puzzle.
-      Solve fast and the interval stretches; struggle and the word comes back
-      sooner. You never grade yourself — your solving speed is the grade.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>What's inside</h2>
-  <ul class="features">
-    <li><strong>20,000 words</strong>, ordered roughly by rarity so you always learn the most useful next word</li>
-    <li><strong>Synonym nuance:</strong> tap any two synonyms to read exactly how they differ</li>
-    <li><strong>Collections that steer puzzles:</strong> save words, and puzzle generation prioritizes words with related meanings</li>
-    <li><strong>Multiplayer, leaderboards, streaks, achievements</strong> and an activity heat map</li>
-    <li><strong>Profiles:</strong> separate progress for you and your kid on the same iPad</li>
-    <li><strong>Reminders tuned to your review backlog</strong>, not a fixed daily nag</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Who it's for (and not for)</h2>
-  <p>Lexi is built for people who want a bigger English vocabulary and find
-  flashcard apps hard to stick with: readers, writers, test preppers, and
-  advanced ESL learners going from fluent to eloquent. It's English-only and
-  iOS-only right now, and it currently teaches one primary sense per word —
-  if you need multi-sense dictionary depth today, pair it with a good
-  dictionary.</p>
+  <h2>Who it's for</h2>
+  <p>People who want a bigger English vocabulary and a system that actually
+  runs itself: readers and writers, GRE/SAT preppers, advanced ESL learners
+  going from fluent to eloquent, and word-game players who want the time to
+  count for something. English, on iPhone and iPad.</p>
   <p><a class="btn" href="{{ site.appstore }}">Get Lexi — free</a></p>
 </section>
 

@@ -56,6 +56,15 @@ a { color: var(--accent-b); }
   border: 1px solid var(--panel-2);
 }
 
+.clue-demo {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px;
+  align-items: center;
+}
+.clue-demo img {
+  width: 100%; height: auto; border-radius: 18px;
+  border: 1px solid var(--panel-2);
+}
+
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .card {
   background: var(--panel); border: 1px solid var(--panel-2);
@@ -97,7 +106,7 @@ footer a { color: var(--text); }
 
 @media (max-width: 700px) {
   h1 { font-size: 27px; }
-  .grid { grid-template-columns: 1fr; }
+  .grid, .clue-demo { grid-template-columns: 1fr; }
   .shots { flex-wrap: wrap; }
   .shots img { width: 100%; max-width: 340px; margin: 0 auto; }
 }

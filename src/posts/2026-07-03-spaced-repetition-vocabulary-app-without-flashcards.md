@@ -1,88 +1,106 @@
 ---
 title: "A Spaced Repetition Vocabulary App Without Flashcards"
-description: "Spaced repetition for vocabulary does not have to mean self-graded flashcards. Here\u2019s how SRS works and why Lexi uses crossword reviews instead."
+description: "Flashcards teach you to recognize a definition's phrasing, not to use the word. Lexi delivers spaced repetition through crossword clues instead. Here's the mechanism."
 date: "2026-07-03"
-tags: ["spaced repetition", "vocabulary app", "flashcard alternative", "crossword puzzles", "language learning"]
+tags: ["spaced repetition", "vocabulary app", "anki alternative", "crossword puzzles"]
 targetKeyword: "spaced repetition vocabulary app"
 draft: true
 ---
 
-If you searched for a spaced repetition vocabulary app, you probably already know the basic promise: review a word right before you forget it. That part is useful. The annoying part is that the classic SRS workflow often means staring at a stack of cards and deciding how well you knew each one.
+Spaced repetition works: review a word right before you'd forget it, and the
+interval until the next review stretches. That part is settled. What isn't
+settled is the *review itself* — and this is where flashcards quietly fail
+for vocabulary.
 
-I built Lexi because I wanted the scheduling without the flashcard chores. It teaches vocabulary through spaced repetition delivered as dynamically generated crossword puzzles, so review still happens on a schedule, but the act of recall feels more like solving than filing.
+## Flashcards train recall of a phrasing, not command of a word
 
-## What does spaced repetition actually mean?
+A flashcard pairs a word with a definition, and the pairing never changes.
+Review it twenty times and you have learned exactly that: given *this
+string*, produce *that string*. You start recognizing the definition by its
+opening words before you've read it. The card gets easier; the word doesn't
+leap to mind in conversation, because conversation never hands you your
+definition.
 
-[Spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) is a review system that changes timing based on memory.
+That's overfitting. You memorized the surface form of the card instead of
+the meaning underneath it — the same failure mode as a model that memorizes
+its training set. The fix is the same too: vary the surface, keep the
+underlying target.
 
-If you recall a word easily, the next review moves farther into the future. If you struggle, it comes back sooner. That is the whole idea. The app is trying to spend your attention where it has the highest chance of helping.
+## What a review looks like in Lexi
 
-A lot of SRS apps expose this through flashcard grading. You see a prompt, reveal the answer, then choose something like Again, Hard, Good, or Easy. [Anki’s manual](https://docs.ankiweb.net/studying.html) describes that review loop clearly, and Anki is excellent if you want control over decks, card types, and scheduling behavior.
+I built [Lexi](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587)
+so that every review is a fill-in-the-blank sentence plus a hint, delivered
+inside a crossword generated from the words you're learning:
 
-For vocabulary, though, there is a second question: what should the review feel like?
+![A Lexi clue, exactly as it appears in-game: "Calling for a poetry truce in the middle of the bar fight was brave, if a bit [adj]." Hint: foolishly guided by noble ideals rather than practical reality.](/img/clue-quixotic-1.jpg)
 
-A word is more than a definition to recognize. You need to retrieve it from a clue, connect it to a situation, notice its tone, and distinguish it from near-synonyms. Flashcards can do some of that if you build good cards. But building good cards is work, and reviewing them can still feel flat.
+You retrieve the word from a *situation* — the way you'll actually need it —
+with the grid's crossing letters as scaffolding when you half-know it. And
+the grading happens without you: Lexi classifies your solve speed (fast,
+normal, slow — normalized for clue and word length) and adjusts the schedule
+itself. No Again/Hard/Good/Easy buttons, no negotiating with the algorithm
+after every card.
 
-## Why self-graded flashcards can get tiring
+## One word, many surfaces, one schedule
 
-Self-graded cards ask you to make two decisions every time: what is the answer, and how well did I know it?
+Here is the structural difference, and why you can't rebuild it in Anki.
+Every word in Lexi cycles through multiple differently-phrased clues —
+currently three per word:
 
-That second decision sounds small. It is not always small in practice. Did you know the word, or did the example sentence give it away? Did you hesitate because the word is weak, or because you were distracted? Should that be Good or Hard? If you care about the system, you can end up managing the system.
+![A second Lexi clue for the same word: "His quixotic plan to pay off the city debt with bake sales won cheers but no serious support."](/img/clue-quixotic-0.jpg)
 
-The SRS math may be fine and the habit can still die. The review mode feels dull, the backlog grows, and the daily session starts to feel like debt.
+![A third: "Her quixotic vow to fix climate change by Friday drew a tired sigh from the lab."](/img/clue-quixotic-2.jpg)
 
-Quizlet is good for quick study sets and familiar flashcard practice. Its [flashcards feature](https://quizlet.com/features/flashcards) is built around the term-and-answer format, which is exactly what many learners want for class material. But if you are learning vocabulary for reading, writing, or general curiosity, you may want the same timing logic without the same card loop.
+Three surfaces, one underlying item, *one* spaced-repetition schedule. There
+is no fixed phrasing to overfit to, but the scheduler still treats the word
+as the single thing it is.
 
-## A spaced repetition vocabulary app does not have to be a flashcard app
+Anki can't express this. Put three clue cards for one word in a deck and
+each card schedules independently — the system now believes you're learning
+three things, and the word shows up on three interleaved timelines. Collapse
+them into one card and you're back to a single frozen phrasing. An
+image-occlusion deck can fake it, but each card carries the full stack of
+mostly-occluded examples, and you're now the author, editor, and maintainer
+of thousands of cards.
 
-My bet with Lexi is simple: keep the spaced repetition, change the retrieval task.
+## The clues are the moat
 
-Instead of showing you a card and asking you to grade yourself, Lexi gives you crossword clues. You still have to retrieve the answer. You still get repeated exposure over time. But you are solving a clue, not flipping a card.
+Writing one good cloze sentence per word sounds easy until you try it for a
+word you're *currently learning* — you'd need the deep usage knowledge the
+card is supposed to teach you. Work from the dictionary definition and your
+sentence quietly encodes your misreading of it.
 
-That matters because crossword clues create a little friction in the right place. You have to pull the word from meaning, length, crossing letters, and context. If you know the word, you move quickly. If you partly know it, the grid helps you work it out. If you do not know it, the app still learns something useful from that attempt.
+Lexi's clues come from an iterative pipeline — a creator model drafts, a
+validator checks it against usage, a guesser has to be able to solve it, a
+reviser fixes what failed, up to seven rounds per clue before acceptance —
+with quality criteria that have been refined through repeated revision
+rounds in the live app. The first ~1,500 words also carry illustrated word
+cards (image, definition, pictured example sentence, connotation tags), and
+every word you've never seen gets its card shown *before* the puzzle. The
+brutal first flashcard rep — being quizzed cold on something you can't
+possibly know — doesn't exist here.
 
-Lexi currently uses a 20,000-word dataset ordered roughly by rarity. About 3,000 words currently have handcrafted-quality AI clues, three per word. The first roughly 1,500 words have illustrated word cards, and those cards are shown before a puzzle for every word you have never seen.
+## Friction is the real enemy
 
-Those numbers are not there to imply the app is finished. They are there because vague feature claims are cheap. The current shape is a large word list, stronger clue coverage in the early and middle range, and illustrated introductions for the first slice of the vocabulary curve.
+Nobody quits spaced repetition because the math stopped working. They quit
+because the sessions feel like filing. So the parts of Lexi that look like
+gamification are doing retention work: notifications fire when words are
+actually due (not at some fixed hour), streaks and an activity heat map make
+consistency visible, and there's multiplayer when you want it. Definitions,
+clues, and images keep improving through in-app feedback and regular
+updates — a live system, not a static deck.
 
-## How Lexi adjusts reviews without asking you to self-grade
+One more asymmetry: Anki is free on desktop, but the iOS app is $24.99.
+Lexi is free on iPhone and iPad, with a small one-time purchase to remove
+ads.
 
-The core difference is automatic review adjustment.
+## Who this is for
 
-In a self-graded flashcard app, you tell the system how well you remembered. In Lexi, the app watches how you solve. It classifies solve speed as fast, normal, or slow, normalized for clue and word length, then raises or lowers the SRS ease factor.
+If you're memorizing anatomy diagrams or kanji stroke order, use Anki —
+arbitrary self-made decks are exactly what it's for. For building an English
+vocabulary that you can actually *deploy*, the flashcard format is the wrong
+tool, and the mechanism above is the reason. I've learned 1,300+ words with
+Lexi myself [PB: one concrete word or moment that made it click for you
+would land well here].
 
-The ease factor is the number that controls how aggressively review intervals stretch or shrink. Higher ease means the word can wait longer before it appears again. Lower ease means the word needs another pass sooner.
-
-This is not magic. Solve speed is a proxy, and proxies have limits. A crossword answer can be helped by crossing letters. A clue can click late even when you know the word. But for vocabulary practice, I prefer a noisy behavioral signal to constant self-grading. The learner’s job should be recalling the word, not negotiating with a scheduling algorithm.
-
-There are a couple of practical guardrails around this. Near-miss answers trigger a “likely a typo” toast instead of counting as wrong. Optional reminders are scheduled from your actual review backlog, not from fixed times. If you have nothing urgent due, the app does not need to pretend that 7:00 p.m. matters.
-
-## Context is where vocabulary apps usually get thin
-
-A lot of vocabulary practice fails quietly because the word stays isolated.
-
-You can memorize “perspicacious = sharply perceptive” and still not feel comfortable using it. Is it complimentary? Formal? Slightly theatrical? How is it different from astute? Those are the questions that make a word usable.
-
-Lexi’s word cards are styled like collectible game cards. Each one has an evocative image, a definition, an example sentence matching the image, and connotation tags. The goal is to give the word a scene before you have to retrieve it in a puzzle.
-
-There is also synonym nuance inside the app. Tap any two synonyms in a synset and you can read how they differ. The synset nodes are colored and positioned by UMAP embedding proximity, which means related words are arranged by a machine-learning map of semantic closeness. You do not need the math. The practical point is that “similar” does not mean “interchangeable.”
-
-## When a crossword-based SRS app makes sense
-
-A crossword review system is not better for every learner. It fits a specific problem: you believe in spaced repetition, but you do not want your vocabulary habit to feel like admin.
-
-If you get bored by rote flashcard review, want recall practice more than recognition, like word games, and want the timing to adapt without grading every card yourself, this approach makes sense. It is built around retrieval with a little structure and a little resistance, which is often what makes a word stick.
-
-If, on the other hand, you want total control over decks and scheduling, Anki is probably the better tool. That is not a knock on Anki. It is exactly why many people use it. Lexi is taking a different bet: less manual control, more automatic review, and a puzzle format that makes the repetitions easier to keep doing.
-
-I have personally learned 1,300+ words with it, which is the main reason I keep working on it. Not because crosswords are a cute wrapper. Because I wanted a way to keep showing up without making vocabulary practice feel like chores.
-
-## Who this is and is not for
-
-Lexi is for people who want spaced repetition without a pile of cards. It is for people who like the idea of a memory system, but want the daily review to feel closer to solving than sorting.
-
-It is probably not for people who mainly want to hand-tune every review decision. That is a real preference, and there are good tools built around it. Lexi is aimed at the person who wants the scheduling logic, the repeated exposure, and more context around each word, without turning every session into a grading task.
-
-> Try Lexi on the App Store: [Download Lexi Vocabulary Crosswords](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587)
-
-Lexi is free to download, with a small one-time purchase to remove ads.
+> **[Get Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587)** — free on iPhone and iPad.
