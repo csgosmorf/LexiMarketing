@@ -64,6 +64,9 @@ a { color: var(--accent-b); }
   width: 100%; height: auto; border-radius: 18px;
   border: 1px solid var(--panel-2);
 }
+.clue-demo img.card-shot {
+  max-width: 340px; justify-self: center; border: none;
+}
 
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .card {

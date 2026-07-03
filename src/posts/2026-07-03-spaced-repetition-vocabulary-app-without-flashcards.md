@@ -32,7 +32,7 @@ I built [Lexi](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id674017
 so that every review is a fill-in-the-blank sentence plus a hint, delivered
 inside a crossword generated from the words you're learning:
 
-![A Lexi clue, exactly as it appears in-game: "Calling for a poetry truce in the middle of the bar fight was brave, if a bit [adj]." Hint: foolishly guided by noble ideals rather than practical reality.](/img/clue-quixotic-1.jpg)
+![A Lexi clue, exactly as it appears in-game: "The coach's jab after the loss still [verb]d everyone in the locker room." Hint: keep hurting inwardly; make someone bitter or annoyed.](/img/clue-rankle-1.jpg)
 
 You retrieve the word from a *situation* — the way you'll actually need it —
 with the grid's crossing letters as scaffolding when you half-know it. And
@@ -47,9 +47,9 @@ Here is the structural difference, and why you can't rebuild it in Anki.
 Every word in Lexi cycles through multiple differently-phrased clues —
 currently three per word:
 
-![A second Lexi clue for the same word: "His quixotic plan to pay off the city debt with bake sales won cheers but no serious support."](/img/clue-quixotic-0.jpg)
+![A second Lexi clue for the same word, rankle: "Years later, the unfair snub still [verb]d whenever the award was mentioned."](/img/clue-rankle-0.jpg)
 
-![A third: "Her quixotic vow to fix climate change by Friday drew a tired sigh from the lab."](/img/clue-quixotic-2.jpg)
+![A third: "Seeing his idea used without credit still [verb]d during each project meeting."](/img/clue-rankle-2.jpg)
 
 Three surfaces, one underlying item, *one* spaced-repetition schedule. There
 is no fixed phrasing to overfit to, but the scheduler still treats the word
@@ -75,9 +75,12 @@ validator checks it against usage, a guesser has to be able to solve it, a
 reviser fixes what failed, up to seven rounds per clue before acceptance —
 with quality criteria that have been refined through repeated revision
 rounds in the live app. The first ~1,500 words also carry illustrated word
-cards (image, definition, pictured example sentence, connotation tags), and
-every word you've never seen gets its card shown *before* the puzzle. The
-brutal first flashcard rep — being quizzed cold on something you can't
+cards — and every word you've never seen gets its card shown *before* the
+puzzle:
+
+![Lexi's word card for rankle: two-panel art of a boss's jab landing, then the same man at lunch with the barb still stuck in his chest, above the definition "to cause lingering irritation or resentment" and a matching example sentence.](/img/card-rankle.jpg)
+
+The brutal first flashcard rep — being quizzed cold on something you can't
 possibly know — doesn't exist here.
 
 ## Friction is the real enemy
@@ -91,8 +94,7 @@ clues, and images keep improving through in-app feedback and regular
 updates — a live system, not a static deck.
 
 One more asymmetry: Anki is free on desktop, but the iOS app is $24.99.
-Lexi is free on iPhone and iPad, with a small one-time purchase to remove
-ads.
+Lexi is free on iPhone and iPad, and there are no ads.
 
 ## Who this is for
 
@@ -103,4 +105,4 @@ tool, and the mechanism above is the reason. I've learned 1,300+ words with
 Lexi myself [PB: one concrete word or moment that made it click for you
 would land well here].
 
-> **[Get Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587)** — free on iPhone and iPad.
+> **[Get Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587)** — free on iPhone and iPad, no ads.
