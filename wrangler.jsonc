@@ -1,0 +1,16 @@
+// Cloudflare Workers config: serve the built 11ty site (_site) as static
+// assets on lexivocab.app. The Workers Builds integration runs
+// `npm run build` then `npx wrangler deploy`, which reads this file.
+{
+  "name": "leximarketing",
+  "compatibility_date": "2026-07-03",
+  "assets": {
+    "directory": "_site",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "lexivocab.app", "custom_domain": true },
+    { "pattern": "www.lexivocab.app", "custom_domain": true }
+  ]
+}
