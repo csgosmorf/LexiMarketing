@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<article class="post">
+  <p class="muted"><a href="/blog/">← All posts</a></p>
+  <h1>{{ title }}</h1>
+  <p class="muted post-date">{{ page.date | readableDate }}</p>
+  {{ content | safe }}
+
+  <aside class="cta-box">
+    <h2>Try the ideas in this post</h2>
+    <p>Lexi turns spaced repetition into crossword puzzles generated from the
+    words you're learning — with illustrated word cards for every new word it
+    introduces. Free on iPhone and iPad.</p>
+    <a class="btn" href="{{ site.appstore }}">Get Lexi on the App Store</a>
+  </aside>
+</article>

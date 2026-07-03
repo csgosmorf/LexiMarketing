@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {{ site.shortName }}{% else %}{{ site.name }} — learn words by solving puzzles{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta name="apple-itunes-app" content="app-id={{ site.appId }}">
+  <meta property="og:type" content="{% if layout == 'post.njk' or tags and 'posts' in tags %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.shortName }}">
+  <meta property="og:image" content="{{ site.url }}/img/sc2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.shortName }} blog" href="/feed.xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="wordmark" href="/">Lexi</a>
+    <nav>
+      <a href="/blog/">Blog</a>
+      <a class="btn btn-small" href="{{ site.appstore }}">Get the app</a>
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>
+      <a href="{{ site.appstore }}">{{ site.name }}</a> — free on the App Store ·
+      <a href="/blog/">Blog</a> ·
+      <a href="/feed.xml">RSS</a> ·
+      <a href="{{ site.privacyPolicy }}">Privacy</a>
+    </p>
+    <p class="muted">Made by a solo developer who wanted a vocabulary app he'd actually keep opening.</p>
+  </footer>
+</body>
+</html>

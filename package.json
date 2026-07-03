@@ -1,0 +1,12 @@
+{
+  "name": "lexi-marketing-site",
+  "private": true,
+  "description": "Landing page + blog for Lexi: Vocabulary Crosswords",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

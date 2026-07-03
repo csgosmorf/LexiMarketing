@@ -1,0 +1,9 @@
+{
+  "name": "Lexi: Vocabulary Crosswords",
+  "shortName": "Lexi",
+  "url": "https://csgosmorf.github.io/LexiMarketing",
+  "description": "Lexi teaches you vocabulary with spaced repetition delivered through crossword puzzles generated just for you. Free on iPhone and iPad.",
+  "appstore": "https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587",
+  "appId": "6740172587",
+  "privacyPolicy": "https://github.com/csgosmorf/LexiconPrivacyPolicy/tree/main"
+}

@@ -1,0 +1,96 @@
+---
+layout: base.njk
+description: "Lexi teaches you vocabulary with real spaced repetition delivered through crossword puzzles generated just for you — with illustrated word cards for every new word. Free on iPhone and iPad."
+---
+<section class="hero">
+  <h1>Learn vocabulary that actually sticks — by solving crosswords built around the words you're learning.</h1>
+  <p class="lede">Flashcards work, but they're a chore. Lexi runs real spaced
+  repetition underneath dynamically generated crossword puzzles, so every
+  review is a puzzle clue instead of a card flip — and every word shows up in
+  a full sentence, in context, the way you'll actually meet it in the wild.</p>
+  <p>
+    <a class="btn btn-big" href="{{ site.appstore }}">Download free on the App&nbsp;Store</a>
+  </p>
+  <p class="muted">iPhone &amp; iPad · free · no account required</p>
+</section>
+
+<section class="shots">
+  <img src="/img/sc2.jpg" width="720" height="1558" loading="lazy"
+       alt="Lexi word card for 'affluent': an illustrated mansion with a yacht, the definition, an example sentence, and connotation tags, shown before a crossword begins">
+  <img src="/img/sc1.jpg" width="720" height="1558" loading="lazy"
+       alt="Lexi home screen with the word of the day 'wane' illustrated by moon phases, a 6-day streak, and New Game and Multiplayer buttons">
+  <img src="/img/sc3.jpg" width="720" height="1558" loading="lazy"
+       alt="Lexi profile screen with learning path options, streak calendar, and an activity heat map of puzzles played">
+</section>
+
+<section>
+  <h2>How Lexi works</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Meet each word properly</h3>
+      <p>Before a puzzle starts, every word you've never seen gets an
+      illustrated word card — picture, definition, an example sentence that
+      matches the picture, and connotation tags. No being blindsided by ten
+      unknown words in a grid.</p>
+    </div>
+    <div class="card">
+      <h3>2. Solve, don't flip</h3>
+      <p>Clues are full sentences with the target word missing — recall in
+      context, which is retrieval practice doing real work. Typo? Lexi notices
+      near-misses and tells you instead of marking you wrong.</p>
+    </div>
+    <div class="card">
+      <h3>3. The schedule runs itself</h3>
+      <p>Spaced repetition decides which words appear in your next puzzle.
+      Solve fast and the interval stretches; struggle and the word comes back
+      sooner. You never grade yourself — your solving speed is the grade.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>What's inside</h2>
+  <ul class="features">
+    <li><strong>20,000 words</strong>, ordered roughly by rarity so you always learn the most useful next word</li>
+    <li><strong>Synonym nuance:</strong> tap any two synonyms to read exactly how they differ</li>
+    <li><strong>Collections that steer puzzles:</strong> save words, and puzzle generation prioritizes words with related meanings</li>
+    <li><strong>Multiplayer, leaderboards, streaks, achievements</strong> and an activity heat map</li>
+    <li><strong>Profiles:</strong> separate progress for you and your kid on the same iPad</li>
+    <li><strong>Reminders tuned to your review backlog</strong>, not a fixed daily nag</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Who it's for (and not for)</h2>
+  <p>Lexi is built for people who want a bigger English vocabulary and find
+  flashcard apps hard to stick with: readers, writers, test preppers, and
+  advanced ESL learners going from fluent to eloquent. It's English-only and
+  iOS-only right now, and it currently teaches one primary sense per word —
+  if you need multi-sense dictionary depth today, pair it with a good
+  dictionary.</p>
+  <p><a class="btn" href="{{ site.appstore }}">Get Lexi — free</a></p>
+</section>
+
+{% set posts = collections.posts | reverse %}
+{% if posts.length > 0 %}
+<section>
+  <h2>From the blog</h2>
+  <ul class="post-list">
+    {% for p in posts.slice(0, 5) %}
+    <li><a href="{{ p.url }}">{{ p.data.title }}</a> <span class="muted">{{ p.date | readableDate }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Lexi: Vocabulary Crosswords",
+  "operatingSystem": "iOS",
+  "applicationCategory": "EducationalApplication",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "url": "{{ site.appstore }}"
+}
+</script>

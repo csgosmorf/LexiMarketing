@@ -1,0 +1,23 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.shortName }} blog</title>
+  <link href="{{ site.url }}/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  {%- set newest = collections.posts | reverse | first %}
+  <updated>{% if newest %}{{ newest.date | isoDate }}{% else %}{{ "2026-07-03" | isoDate }}{% endif %}</updated>
+  <id>{{ site.url }}/</id>
+  <author><name>Peter Barnett</name></author>
+  {%- for p in collections.posts | reverse %}
+  <entry>
+    <title>{{ p.data.title }}</title>
+    <link href="{{ site.url }}{{ p.url }}"/>
+    <updated>{{ p.date | isoDate }}</updated>
+    <id>{{ site.url }}{{ p.url }}</id>
+    <summary>{{ p.data.description }}</summary>
+  </entry>
+  {%- endfor %}
+</feed>
