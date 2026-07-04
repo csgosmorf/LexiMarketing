@@ -4,7 +4,7 @@ description: "Flashcards teach you to recognize a definition's phrasing, not to 
 date: "2026-07-03"
 tags: ["spaced repetition", "vocabulary app", "anki alternative", "crossword puzzles"]
 targetKeyword: "spaced repetition vocabulary app"
-draft: true
+draft: false
 ---
 
 Spaced repetition works: review a word right before you'd forget it, and the
@@ -102,7 +102,9 @@ If you're memorizing anatomy diagrams or kanji stroke order, use Anki —
 arbitrary self-made decks are exactly what it's for. For building an English
 vocabulary that you can actually *deploy*, the flashcard format is the wrong
 tool, and the mechanism above is the reason. I've learned 1,300+ words with
-Lexi myself [PB: one concrete word or moment that made it click for you
-would land well here].
+Lexi myself. It's funny, I didn't expect these words to make such a difference
+but all of a sudden I'm seeing them everywhere, especially in books but even
+in podcasts, news reports, and even casual conversation. I must have just been
+ignoring their occurrences when I didn't know what they meant. 
 
 > **[Get Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587)** — free on iPhone and iPad, no ads.
