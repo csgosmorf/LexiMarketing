@@ -16,6 +16,21 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="alternate" type="application/atom+xml" title="{{ site.shortName }} blog" href="/feed.xml">
   <link rel="stylesheet" href="/css/style.css">
+  <script>
+    // PostHog — only on the live domain so localhost previews never pollute analytics.
+    if (location.hostname === "lexivocab.app" || location.hostname === "www.lexivocab.app") {
+      var phs = document.createElement("script");
+      phs.async = true;
+      phs.src = "https://us-assets.i.posthog.com/static/array.js";
+      phs.onload = function () {
+        window.posthog && window.posthog.init("phc_CG4yS3uf8rL5JXWMUBCihtAdcvStyiUDQxJ5NJ7UHPrP", {
+          api_host: "https://us.i.posthog.com",
+          defaults: "2026-05-30"
+        });
+      };
+      document.head.appendChild(phs);
+    }
+  </script>
 </head>
 <body>
   <header class="nav">
@@ -33,7 +48,8 @@
       <a href="{{ site.appstore }}">{{ site.name }}</a> — free on the App Store ·
       <a href="/blog/">Blog</a> ·
       <a href="/feed.xml">RSS</a> ·
-      <a href="{{ site.privacyPolicy }}">Privacy</a>
+      <a href="/privacy/">Privacy</a> ·
+      <a href="/terms/">Terms</a>
     </p>
     <p class="muted">Made by a solo developer who wanted a vocabulary app he'd actually keep opening.</p>
   </footer>
