@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["L4987M67NR.com.pbgame.LexiconLab"],
+        "components": [
+          { "/": "/premium/*", "comment": "Stripe checkout return pages" },
+          { "/": "/invite/*", "comment": "Referral / friend-code links" }
+        ]
+      }
+    ]
+  }
+}

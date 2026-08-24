@@ -113,3 +113,7 @@ footer a { color: var(--text); }
   .shots { flex-wrap: wrap; }
   .shots img { width: 100%; max-width: 340px; margin: 0 auto; }
 }
+
+/* Plain markdown tables (premium pricing) */
+table { border-collapse: collapse; margin: 12px 0 18px; }
+th, td { text-align: left; padding: 6px 22px 6px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }

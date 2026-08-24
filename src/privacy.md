@@ -18,7 +18,7 @@ This policy describes what Lexi: Vocabulary Crosswords collects, how it is used,
 - **Profile data you provide:** display name, chosen avatar, and optional bio and city.
 - **Learning and gameplay data:** puzzle history, review schedules, streaks, achievements, statistics, and preferences.
 - **User content:** profile comments and direct messages you send, and reports you submit.
-- **Purchase state:** which subscriptions or entitlements are active, via Apple. We never receive your payment details.
+- **Purchase state:** which subscriptions or entitlements are active. Purchases through the App Store are handled by Apple; in the United States, subscriptions bought through our web checkout are handled by Stripe, which gives us a customer and subscription identifier, the subscription's status and renewal date, and the email address you enter at checkout for receipts. We never receive your card number.
 - **Device data in reports:** bug and feedback reports include basic device model and OS version to help us fix problems.
 - **Push token:** if you enable multiplayer invitations, a notification token for your device.
 
