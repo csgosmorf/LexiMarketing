@@ -67,8 +67,10 @@ a { color: var(--accent-b); }
 .clue-demo img.card-shot {
   max-width: 340px; justify-self: center; border: none;
 }
-.clue-demo img.phone-shot {
+.clue-demo .phone-shot {
+  display: block; width: 100%; height: auto;
   max-width: 300px; justify-self: center;
+  border-radius: 18px; border: 1px solid var(--panel-2);
 }
 
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
