@@ -10,7 +10,7 @@ module.exports = function (eleventyConfig) {
     "src/css": "css", "src/img": "img", "src/app-ads.txt": "app-ads.txt",
     // Universal links for the app's Stripe-checkout return pages (/premium/*)
     // + the Cloudflare _headers file that serves the AASA as JSON.
-    "src/.well-known": ".well-known", "src/_headers": "_headers",
+    "src/.well-known": ".well-known", "src/_headers": "_headers", "src/_redirects": "_redirects",
   });
 
   // Posts with `draft: true` in frontmatter are excluded from the build.

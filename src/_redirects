@@ -1,0 +1,4 @@
+# One claim surface: /keys goes straight to the giveaway function's stepped
+# flow (the page below is only a fallback if this file stops being honored).
+/keys https://us-central1-lexicon-lab.cloudfunctions.net/xGiveaway/ 302
+/keys/ https://us-central1-lexicon-lab.cloudfunctions.net/xGiveaway/ 302
