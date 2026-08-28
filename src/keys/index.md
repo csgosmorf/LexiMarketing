@@ -10,4 +10,4 @@ eleventyExcludeFromCollections: true
 
 <p><a class="btn btn-big" href="https://us-central1-lexicon-lab.cloudfunctions.net/xGiveaway/" rel="nofollow">Claim your key →</a></p>
 
-<p class="muted">First 100 to claim get lifetime Premium; everyone after gets 2 months. One key per X account.</p>
+<p class="muted">First 200 to claim get lifetime Premium; everyone after gets 2 months. One key per X account.</p>
