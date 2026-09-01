@@ -56,6 +56,35 @@ const hashSlug = (classID) =>
 const aliasSlug = (word) =>
   word.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).join("-");
 
+// The canonical tile order — IDENTICAL to the app's
+// ClassMatchExportModel.canonicalTileOrder (parity-tested; change one and
+// you must change both): Fisher-Yates over the alphabetical list, driven by
+// SplitMix64 seeded with FNV-1a of the class id, identity rotated away.
+// Every platform's image and the answer page share this order, so a reader
+// checks their answer against an identically-arranged grid.
+const MASK64 = (1n << 64n) - 1n;
+function canonicalOrder(classID, sortedWords) {
+  if (sortedWords.length < 2) return [...sortedWords];
+  let seed = 0xcbf29ce484222325n;
+  for (const b of Buffer.from(classID, "utf8"))
+    seed = ((seed ^ BigInt(b)) * 0x100000001b3n) & MASK64;
+  let state = seed;
+  const next = () => {
+    state = (state + 0x9e3779b97f4a7c15n) & MASK64;
+    let z = state;
+    z = ((z ^ (z >> 30n)) * 0xbf58476d1ce4e5b9n) & MASK64;
+    z = ((z ^ (z >> 27n)) * 0x94d049bb133111ebn) & MASK64;
+    return z ^ (z >> 31n);
+  };
+  const tiles = [...sortedWords];
+  for (let i = tiles.length - 1; i >= 1; i--) {
+    const j = Number(next() % BigInt(i + 1));
+    [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+  }
+  if (tiles.every((w, k) => w === sortedWords[k])) tiles.push(tiles.shift());
+  return tiles;
+}
+
 // WordNet sense keys carry the POS: word%<ss_type>:… (1 n, 2 v, 3/5 adj, 4 adv).
 const POS_BY_SS_TYPE = { 1: "noun", 2: "verb", 3: "adjective", 4: "adverb", 5: "adjective" };
 const posOf = (members) => {
@@ -93,12 +122,18 @@ for (const cls of registry.classes) {
     wordsLine: [...words].sort().join(", "),
     pos: posOf(cls.members),
     definition: cls.groupDefinition ?? null,
-    words: words.map((w) => ({
-      word: w,
-      signature: cls.signatures?.[w] ?? null,
-      // Display-tier JPEG (~50KB); master PNG only as fallback.
-      image: storageURL(tiles[w].tile ?? tiles[w].path),
-    })),
+    // In canonical TILE order (tile 1 = first entry), each with its
+    // multiple-choice letter (alphabetical, as on the posted chips).
+    words: (() => {
+      const sorted = [...words].sort();
+      return canonicalOrder(cls.id, sorted).map((w) => ({
+        word: w,
+        letter: String.fromCharCode(65 + sorted.indexOf(w)),
+        signature: cls.signatures?.[w] ?? null,
+        // Display-tier JPEG (~50KB); master PNG only as fallback.
+        image: storageURL(tiles[w].tile ?? tiles[w].path),
+      }));
+    })(),
   });
 }
 
@@ -123,6 +158,13 @@ const out = join(ROOT, "src", "_data", "answers.json");
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(out, JSON.stringify(answers, null, 1) + "\n");
 console.log(`wrote ${answers.length} answer pages (registry v${pointer.version}) -> ${out}`);
+
+// Compact word->page index for the /answers/ search page (emitted at
+// /a/index.json by src/answers-index.njk): [alias, [words alphabetical]].
+const index = answers.map((a) => [a.alias, a.wordsLine.split(", ")]);
+const indexOut = join(ROOT, "src", "_data", "answersIndex.json");
+writeFileSync(indexOut, JSON.stringify(index) + "\n");
+console.log(`wrote search index (${index.length} classes) -> ${indexOut}`);
 
 // ---------------------------------------------------------------------------
 // Per-page OG cards: 1200x630 JPEG, app-palette night sky + the class's

@@ -1,0 +1,119 @@
+---
+# The answer-key search: how quiz viewers on link-hostile platforms
+# (Instagram above all — no tappable links, no copyable comments) reach a
+# reveal. Search any word from a posted quiz, pick the app it was seen on,
+# and land on the answer page laid out in that platform's grid shape
+# (reels post three across, X/Threads/Pinterest two across; the numbering
+# is identical everywhere).
+layout: base.njk
+permalink: /answers/
+title: "Answer keys"
+description: "Posted a guess on a Lexi vocabulary quiz? Search any word from it to see which word matches which picture."
+---
+<section class="hero answer-hero">
+  <p class="muted answer-kicker">Answer keys 🔭</p>
+  <h1>Find your quiz's answer</h1>
+  <p class="lede">Search any word from the quiz — each one leads to its
+  reveal, every tile matched to its word.</p>
+  <input class="answers-search" id="answers-search" type="search"
+         placeholder="Type a word from the quiz…" autocomplete="off"
+         autocapitalize="none" spellcheck="false">
+  <div class="answers-results" id="answers-results"></div>
+  <div class="answers-chooser" id="answers-chooser" hidden>
+    <p id="answers-chooser-title">Where did you see the quiz?</p>
+    <div class="platforms" id="answers-platforms"></div>
+  </div>
+  <p class="muted answers-hint">The answer page arranges its pictures
+  exactly like the quiz you saw, matching numbers and all.</p>
+</section>
+
+<section class="cta-box">
+  <h2>These quizzes are from Lexi</h2>
+  <p>Lexi teaches vocabulary with spaced repetition delivered through
+  crossword puzzles built just for you — and drills confusable words like
+  these with contrast panels, until the nuances stick.</p>
+  <p>
+    <a class="btn" href="{{ site.appstore }}">Download free on the App&nbsp;Store</a>
+    &nbsp;&nbsp;<a href="/">See what Lexi is →</a>
+  </p>
+  <p class="muted">iPhone &amp; iPad · free · no ads · no account required</p>
+</section>
+
+<script>
+(function () {
+  var input = document.getElementById("answers-search");
+  var results = document.getElementById("answers-results");
+  var chooser = document.getElementById("answers-chooser");
+  var chooserTitle = document.getElementById("answers-chooser-title");
+  var platformsBox = document.getElementById("answers-platforms");
+  var index = null;      // [[alias, [words…]], …]
+  var words = null;      // [{word, alias}] flattened, sorted
+  var loading = null;
+
+  // Reels post the grid three across; X/Threads/Pinterest two across.
+  var platforms = [
+    ["X", ""], ["Threads", ""], ["Pinterest", ""],
+    ["Instagram", "?g=3"], ["TikTok", "?g=3"], ["Facebook", "?g=3"],
+    ["YouTube", "?g=3"], ["Not sure", ""]
+  ];
+
+  function load() {
+    if (!loading) {
+      loading = fetch("/a/index.json").then(function (r) { return r.json(); })
+        .then(function (data) {
+          index = data;
+          words = [];
+          data.forEach(function (entry) {
+            entry[1].forEach(function (w) { words.push({ word: w, alias: entry[0] }); });
+          });
+          words.sort(function (a, b) { return a.word < b.word ? -1 : 1; });
+        });
+    }
+    return loading;
+  }
+
+  function render(q) {
+    results.innerHTML = "";
+    chooser.hidden = true;
+    if (!q || !words) return;
+    var starts = [], contains = [];
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i].word;
+      if (w.indexOf(q) === 0) starts.push(words[i]);
+      else if (w.indexOf(q) !== -1) contains.push(words[i]);
+      if (starts.length >= 30) break;
+    }
+    var matches = starts.concat(contains).slice(0, 30);
+    matches.forEach(function (m) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = m.word;
+      b.addEventListener("click", function () { pick(b, m); });
+      results.appendChild(b);
+    });
+  }
+
+  function pick(button, m) {
+    Array.prototype.forEach.call(results.children, function (c) {
+      c.classList.remove("selected");
+    });
+    button.classList.add("selected");
+    chooserTitle.textContent = "“" + m.word + "” — where did you see the quiz?";
+    platformsBox.innerHTML = "";
+    platforms.forEach(function (p) {
+      var a = document.createElement("a");
+      a.href = "/a/" + m.alias + "/" + p[1];
+      a.textContent = p[0];
+      platformsBox.appendChild(a);
+    });
+    chooser.hidden = false;
+    chooser.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  input.addEventListener("input", function () {
+    var q = input.value.trim().toLowerCase();
+    load().then(function () { render(q); });
+  });
+  input.addEventListener("focus", load);
+})();
+</script>

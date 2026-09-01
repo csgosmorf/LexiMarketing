@@ -1,0 +1,8 @@
+---
+# The /answers/ search page's data: [alias, [words alphabetical]] per class,
+# generated into _data by scripts/build-answers.mjs. ~70KB — fetched once,
+# client-side filtering from there.
+permalink: /a/index.json
+eleventyExcludeFromCollections: true
+---
+{{ answersIndex | dump | safe }}

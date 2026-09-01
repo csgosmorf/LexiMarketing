@@ -146,14 +146,31 @@ th, td { text-align: left; padding: 6px 22px 6px 0; border-bottom: 1px solid rgb
 .answer-def { margin: 0 0 12px; font-size: 18px; }
 
 .answer-tiles {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  /* Flex-wrap, not grid: a centered partial last row falls out naturally
+     at ANY column count (2 tiles under 3 columns straddle grid lines,
+     which grid can't center). */
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 2px;
   padding-top: 14px; /* room for the first row's straddling word pills */
 }
-.answer-tile { position: relative; margin: 0; }
+.answer-tile { position: relative; margin: 0; width: calc((100% - 2px) / 2); }
+/* ?g=3: the reel platforms' three-across arrangement (same numbering). */
+.answer-tiles.cols-3 .answer-tile { width: calc((100% - 4px) / 3); }
+.answer-num {
+  position: absolute; top: 8px; left: 8px; z-index: 2;
+  width: 27px; height: 27px; border-radius: 50%;
+  background: var(--gold); color: #10131f;
+  font-weight: 800; font-size: 15px; line-height: 27px; text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+.answer-letter {
+  display: inline-block; margin-right: 7px; padding-right: 8px;
+  border-right: 1px solid rgba(255, 255, 255, 0.28);
+}
 .answer-tile img { display: block; width: 100%; height: auto; }
 .answer-signature {
   position: absolute; top: 0; left: 0; right: 0; margin: 0;
-  padding: 14px 10px 26px; text-align: center;
+  /* 44px sides: symmetric clearance for the number badge (stays centered) */
+  padding: 14px 44px 26px; text-align: center;
   font-style: italic; font-size: 15px; line-height: 1.35;
   color: rgba(255, 255, 255, 0.92);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
@@ -169,11 +186,45 @@ th, td { text-align: left; padding: 6px 22px 6px 0; border-bottom: 1px solid rgb
   z-index: 2;
 }
 /* Odd class sizes: the app centers the lone last tile; span + center it. */
-.answer-tiles.odd-count .answer-tile:last-child {
-  grid-column: 1 / -1; width: calc(50% - 1px); justify-self: center;
-}
 @media (max-width: 520px) {
   .answer-def { font-size: 16px; }
   .answer-signature { font-size: 12.5px; padding-bottom: 18px; }
   .answer-word { font-size: 12px; top: -11px; }
+  .answer-num { width: 22px; height: 22px; font-size: 12.5px; line-height: 22px; }
 }
+
+/* ── /answers/ — the answer-key search ─────────────────────────────────── */
+.answers-search {
+  width: 100%; box-sizing: border-box; margin-top: 10px;
+  padding: 13px 16px; font-size: 17px; color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 12px;
+  outline: none;
+}
+.answers-search:focus { border-color: rgba(217, 166, 64, 0.6); }
+.answers-results { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+.answers-results button {
+  padding: 8px 14px; font-size: 15px; font-weight: 600;
+  color: var(--text); background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 999px;
+  cursor: pointer;
+}
+.answers-results button:hover { border-color: rgba(217, 166, 64, 0.6); }
+.answers-results button.selected {
+  background: rgba(217, 166, 64, 0.16); border-color: var(--gold);
+}
+.answers-hint { margin-top: 10px; font-size: 14px; }
+.answers-chooser {
+  margin-top: 16px; padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px;
+}
+.answers-chooser p { margin: 0 0 10px; font-weight: 600; }
+.answers-chooser .platforms { display: flex; flex-wrap: wrap; gap: 8px; }
+.answers-chooser a {
+  display: inline-block; padding: 8px 14px; font-size: 14.5px; font-weight: 600;
+  color: var(--text); text-decoration: none;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 999px;
+}
+.answers-chooser a:hover { border-color: var(--gold); color: var(--gold); }

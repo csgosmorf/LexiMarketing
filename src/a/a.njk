@@ -38,15 +38,24 @@ eleventyComputed:
     {% if a.definition %}<p class="answer-def">{{ a.definition }}</p>{% endif %}
   </header>
   {% endif %}
-  <div class="answer-tiles{% if a.words.length % 2 == 1 %} odd-count{% endif %}">
+  {# Tiles in the CANONICAL order — the same arrangement and numbering as
+     every posted image, so checking an answer is a glance, not a re-solve.
+     ?g=3 lays the grid three across, matching the reel platforms' images
+     (X/Threads/Pinterest post two across, the default). #}
+  <div class="answer-tiles" id="answer-tiles">
     {% for w in a.words %}
     <figure class="answer-tile">
+      <span class="answer-num">{{ loop.index }}</span>
       <img src="{{ w.image }}" alt="Illustration for '{{ w.word }}'{% if w.signature %} — {{ w.signature }}{% endif %}" loading="lazy" width="512" height="512">
       {% if w.signature %}<p class="answer-signature">{{ w.signature }}</p>{% endif %}
-      <figcaption class="answer-word">{{ w.word }}</figcaption>
+      <figcaption class="answer-word"><span class="answer-letter">{{ w.letter }}</span>{{ w.word }}</figcaption>
     </figure>
     {% endfor %}
   </div>
+  <script>
+    if (new URLSearchParams(location.search).get("g") === "3")
+      document.getElementById("answer-tiles").classList.add("cols-3");
+  </script>
 </section>
 
 <section class="cta-box">
