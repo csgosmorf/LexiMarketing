@@ -1,21 +1,29 @@
 ---
-# Unlisted answer pages for the social quiz posts: /a/<slug>/ shows one
+# Unlisted answer pages for the social quiz posts: /a/<alias>/ shows one
 # confusion class fully revealed (word + signature on every tile), exactly
-# what the quiz image hides. Reached ONLY by the link Peter posts —
-# excluded from collections (so the sitemap never lists them), noindexed
-# (so search engines that follow a shared link keep them out of results),
-# and /a/ itself redirects home. AI crawlers are barred from /a/ in
-# robots.txt.
+# what the quiz image hides. The alias is the class's alphabetically-first
+# word — short enough to TYPE off a screenshot, which is how Instagram
+# viewers (no tappable links, no copyable comments) reach it. Reached ONLY
+# by the link Peter posts — excluded from collections (so the sitemap never
+# lists them), noindexed (so search engines that follow a shared link keep
+# them out of results), and /a/ itself redirects home. AI crawlers are
+# barred from /a/ in robots.txt. Legacy hash URLs 302 here (redirect.njk).
+#
+# Each page carries its own OG card (built by scripts/build-answers.mjs)
+# and word-list description, so a posted answer link previews as ITS quiz's
+# reveal instead of the home page's screenshot.
 pagination:
   data: answers
   size: 1
   alias: a
-permalink: "/a/{{ a.slug }}/"
+permalink: "/a/{{ a.alias }}/"
 layout: base.njk
 eleventyExcludeFromCollections: true
 robots: "noindex, nofollow, noimageindex"
 title: "The answer"
-description: "Which word belongs to which picture — revealed."
+eleventyComputed:
+  description: "Which picture matches {{ a.wordsLine }}? Every tile revealed."
+  ogImage: "/img/a/{{ a.alias }}.jpg"
 ---
 <section class="hero answer-hero">
   <p class="muted answer-kicker">You found the reveal 🔭</p>

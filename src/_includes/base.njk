@@ -13,7 +13,12 @@
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.shortName }}">
-  <meta property="og:image" content="{{ site.url }}/img/og.jpg">
+  {# Pages may carry their own preview card (the /a/ answer pages do — a
+     per-class night-sky card beats the home screenshot under a quiz reply);
+     everything else keeps the site-wide og.jpg. #}
+  <meta property="og:image" content="{{ site.url }}{{ ogImage or '/img/og.jpg' }}">
+  {% if ogImage %}<meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">{% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <link rel="alternate" type="application/atom+xml" title="{{ site.shortName }} blog" href="/feed.xml">
   <link rel="stylesheet" href="/css/style.css">

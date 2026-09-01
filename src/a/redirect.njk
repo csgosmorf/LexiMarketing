@@ -1,0 +1,40 @@
+---
+# Legacy answer URLs: before Sep 2026 the post kit linked
+# /a/<12-hex-hash>/; the canonical pages now live at /a/<word>/ (see
+# a.njk). Every hash URL stays alive as a self-contained hop — meta
+# refresh + JS replace for people, and the SAME per-class OG tags for
+# scrapers, which do not follow meta refreshes, so an old posted link
+# still previews as its own reveal card.
+pagination:
+  data: answers
+  size: 1
+  alias: a
+permalink: "/a/{{ a.slug }}/"
+eleventyExcludeFromCollections: true
+layout: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The answer · Lexi</title>
+  <meta name="robots" content="noindex, nofollow, noimageindex">
+  <meta name="description" content="Which picture matches {{ a.wordsLine }}? Every tile revealed.">
+  <link rel="canonical" href="{{ site.url }}/a/{{ a.alias }}/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The answer">
+  <meta property="og:description" content="Which picture matches {{ a.wordsLine }}? Every tile revealed.">
+  <meta property="og:url" content="{{ site.url }}/a/{{ a.alias }}/">
+  <meta property="og:site_name" content="Lexi">
+  <meta property="og:image" content="{{ site.url }}/img/a/{{ a.alias }}.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta http-equiv="refresh" content="0; url=/a/{{ a.alias }}/">
+  <script>location.replace("/a/{{ a.alias }}/");</script>
+</head>
+<body>
+  <p><a href="/a/{{ a.alias }}/">The answer moved here →</a></p>
+</body>
+</html>
