@@ -20,6 +20,12 @@
   {% if ogImage %}<meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">{% endif %}
   <meta name="twitter:card" content="summary_large_image">
+  {# The app icon as favicon — link previews (Threads shows a tiny site
+     icon under every card) fell back to a generic globe without one. #}
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="{{ site.shortName }} blog" href="/feed.xml">
   <link rel="stylesheet" href="/css/style.css">
   <script>

@@ -45,10 +45,11 @@ eleventyComputed:
   <div class="answer-tiles" id="answer-tiles">
     {% for w in a.words %}
     <figure class="answer-tile">
-      <span class="answer-num">{{ loop.index }}</span>
       <img src="{{ w.image }}" alt="Illustration for '{{ w.word }}'{% if w.signature %} — {{ w.signature }}{% endif %}" loading="lazy" width="512" height="512">
       {% if w.signature %}<p class="answer-signature">{{ w.signature }}</p>{% endif %}
-      <figcaption class="answer-word"><span class="answer-letter">{{ w.letter }}</span>{{ w.word }}</figcaption>
+      {# One pill carries the whole mapping: picture number, its letter,
+         its word — the separate corner badge collided with the pill. #}
+      <figcaption class="answer-word"><span class="answer-tile-num">{{ loop.index }}</span><span class="answer-letter">{{ w.letter }}</span>{{ w.word }}</figcaption>
     </figure>
     {% endfor %}
   </div>

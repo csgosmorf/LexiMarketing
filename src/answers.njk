@@ -50,12 +50,11 @@ description: "Posted a guess on a Lexi vocabulary quiz? Search any word from it 
   var words = null;      // [{word, alias}] flattened, sorted
   var loading = null;
 
-  // Reels post the grid three across; X/Threads/Pinterest two across.
-  var platforms = [
-    ["X", ""], ["Threads", ""], ["Pinterest", ""],
-    ["Instagram", "?g=3"], ["TikTok", "?g=3"], ["Facebook", "?g=3"],
-    ["YouTube", "?g=3"], ["Not sure", ""]
-  ];
+  // Reel platforms post 5-/6-word grids three across; everything else
+  // (and every smaller class) uses the two-across default.
+  var reelPlatforms = { Instagram: 1, TikTok: 1, Facebook: 1, YouTube: 1 };
+  var platforms = ["X", "Threads", "Pinterest", "Instagram", "TikTok",
+                   "Facebook", "YouTube", "Not sure"];
 
   function load() {
     if (!loading) {
@@ -64,7 +63,9 @@ description: "Posted a guess on a Lexi vocabulary quiz? Search any word from it 
           index = data;
           words = [];
           data.forEach(function (entry) {
-            entry[1].forEach(function (w) { words.push({ word: w, alias: entry[0] }); });
+            entry[1].forEach(function (w) {
+              words.push({ word: w, alias: entry[0], count: entry[1].length });
+            });
           });
           words.sort(function (a, b) { return a.word < b.word ? -1 : 1; });
         });
@@ -102,8 +103,9 @@ description: "Posted a guess on a Lexi vocabulary quiz? Search any word from it 
     platformsBox.innerHTML = "";
     platforms.forEach(function (p) {
       var a = document.createElement("a");
-      a.href = "/a/" + m.alias + "/" + p[1];
-      a.textContent = p[0];
+      var g3 = reelPlatforms[p] && m.count >= 5;
+      a.href = "/a/" + m.alias + "/" + (g3 ? "?g=3" : "");
+      a.textContent = p;
       platformsBox.appendChild(a);
     });
     chooser.hidden = false;
