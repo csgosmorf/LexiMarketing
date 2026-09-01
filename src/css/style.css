@@ -122,3 +122,58 @@ footer a { color: var(--text); }
 /* Plain markdown tables (premium pricing) */
 table { border-collapse: collapse; margin: 12px 0 18px; }
 th, td { text-align: left; padding: 6px 22px 6px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+/* ── /a/<slug>/ — unlisted quiz-answer pages ─────────────────────────────
+   The app's contrast panel, translated: centroid header (POS + shared
+   definition) over a contiguous two-column tile mosaic, each tile wearing
+   its signature along the top and its word on a straddling pill — the
+   revealed state of the Sense Info panel. */
+.answer-hero { padding-top: 26px; }
+.answer-kicker { margin-bottom: 4px; letter-spacing: 0.06em; text-transform: uppercase; font-size: 13px; }
+
+.answer-sheet {
+  margin-top: 26px; padding: 4px 0 0;
+  background: var(--panel);
+  border: 1.5px solid var(--gold);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.answer-centroid { text-align: center; padding: 14px 22px 4px; }
+.answer-pos {
+  margin: 0 0 4px; color: var(--accent-a);
+  font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.answer-def { margin: 0 0 12px; font-size: 18px; }
+
+.answer-tiles {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  padding-top: 14px; /* room for the first row's straddling word pills */
+}
+.answer-tile { position: relative; margin: 0; }
+.answer-tile img { display: block; width: 100%; height: auto; }
+.answer-signature {
+  position: absolute; top: 0; left: 0; right: 0; margin: 0;
+  padding: 14px 10px 26px; text-align: center;
+  font-style: italic; font-size: 15px; line-height: 1.35;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.40) 60%, rgba(0,0,0,0));
+}
+.answer-word {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  padding: 3px 14px; border-radius: 999px;
+  background: rgba(0, 0, 0, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--gold); font-weight: 800; font-size: 14px;
+  letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+  z-index: 2;
+}
+/* Odd class sizes: the app centers the lone last tile; span + center it. */
+.answer-tiles.odd-count .answer-tile:last-child {
+  grid-column: 1 / -1; width: calc(50% - 1px); justify-self: center;
+}
+@media (max-width: 520px) {
+  .answer-def { font-size: 16px; }
+  .answer-signature { font-size: 12.5px; padding-bottom: 18px; }
+  .answer-word { font-size: 12px; top: -11px; }
+}

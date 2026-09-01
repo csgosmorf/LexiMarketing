@@ -5,4 +5,14 @@ eleventyExcludeFromCollections: true
 User-agent: *
 Allow: /
 
+# /a/ holds unlisted quiz-answer pages: reachable only via links posted with
+# each quiz, never meant to be crawled into a corpus or an index. Search
+# engines also get a noindex meta on the pages themselves (they may still
+# fetch them for link previews). AI/data crawlers are barred from the path
+# outright — the rest of the site stays open to them on purpose.
+{% for bot in ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User", "Claude-SearchBot", "anthropic-ai", "CCBot", "Google-Extended", "Applebot-Extended", "PerplexityBot", "Perplexity-User", "Bytespider", "meta-externalagent", "meta-externalfetcher", "Amazonbot", "cohere-ai", "Diffbot", "ImagesiftBot", "Timpibot", "omgilibot"] -%}
+User-agent: {{ bot }}
+Disallow: /a/
+
+{% endfor -%}
 Sitemap: {{ site.url }}/sitemap.xml

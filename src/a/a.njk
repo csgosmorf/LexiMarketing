@@ -1,0 +1,55 @@
+---
+# Unlisted answer pages for the social quiz posts: /a/<slug>/ shows one
+# confusion class fully revealed (word + signature on every tile), exactly
+# what the quiz image hides. Reached ONLY by the link Peter posts —
+# excluded from collections (so the sitemap never lists them), noindexed
+# (so search engines that follow a shared link keep them out of results),
+# and /a/ itself redirects home. AI crawlers are barred from /a/ in
+# robots.txt.
+pagination:
+  data: answers
+  size: 1
+  alias: a
+permalink: "/a/{{ a.slug }}/"
+layout: base.njk
+eleventyExcludeFromCollections: true
+robots: "noindex, nofollow, noimageindex"
+title: "The answer"
+description: "Which word belongs to which picture — revealed."
+---
+<section class="hero answer-hero">
+  <p class="muted answer-kicker">You found the reveal 🔭</p>
+  <h1>Which word goes where</h1>
+  <p class="lede">Every tile, with its word and the nuance that gives it away.</p>
+</section>
+
+<section class="answer-sheet">
+  {% if a.pos or a.definition %}
+  <header class="answer-centroid">
+    {% if a.pos %}<p class="answer-pos">{{ a.pos }}</p>{% endif %}
+    {% if a.definition %}<p class="answer-def">{{ a.definition }}</p>{% endif %}
+  </header>
+  {% endif %}
+  <div class="answer-tiles{% if a.words.length % 2 == 1 %} odd-count{% endif %}">
+    {% for w in a.words %}
+    <figure class="answer-tile">
+      <img src="{{ w.image }}" alt="Illustration for '{{ w.word }}'{% if w.signature %} — {{ w.signature }}{% endif %}" loading="lazy" width="512" height="512">
+      {% if w.signature %}<p class="answer-signature">{{ w.signature }}</p>{% endif %}
+      <figcaption class="answer-word">{{ w.word }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta-box">
+  <h2>These tiles are from Lexi</h2>
+  <p>Lexi teaches vocabulary with spaced repetition delivered through
+  crossword puzzles built just for you — and drills confusable words like
+  these with contrast panels, until the nuances stick. Every word you learn
+  becomes a star in your own night sky.</p>
+  <p>
+    <a class="btn" href="{{ site.appstore }}">Download free on the App&nbsp;Store</a>
+    &nbsp;&nbsp;<a href="/">See what Lexi is →</a>
+  </p>
+  <p class="muted">iPhone &amp; iPad · free · no ads · no account required</p>
+</section>

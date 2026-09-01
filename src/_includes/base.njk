@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {{ site.shortName }}{% else %}{{ site.name }} — learn words by solving puzzles{% endif %}</title>
   <meta name="description" content="{{ description or site.description }}">
+  {% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <meta name="apple-itunes-app" content="app-id={{ site.appId }}">
   <meta property="og:type" content="{% if layout == 'post.njk' or tags and 'posts' in tags %}article{% else %}website{% endif %}">

@@ -2,3 +2,7 @@
 # flow (the page below is only a fallback if this file stops being honored).
 /keys https://us-central1-lexicon-lab.cloudfunctions.net/xGiveaway/ 302
 /keys/ https://us-central1-lexicon-lab.cloudfunctions.net/xGiveaway/ 302
+
+# /a/<slug>/ answer pages are unlisted; the bare directory is not a place.
+/a / 302
+/a/ / 302
