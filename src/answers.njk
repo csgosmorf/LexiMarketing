@@ -50,9 +50,15 @@ description: "Posted a guess on a Lexi vocabulary quiz? Search any word from it 
   var words = null;      // [{word, alias}] flattened, sorted
   var loading = null;
 
-  // Reel platforms post 5-/6-word grids three across; everything else
-  // (and every smaller class) uses the two-across default.
+  // Mirrors the app exporter's `mosaicColumns` rule (ConstellationPanelView):
+  // reel platforms post 5-/6-word grids three across, and TikTok's
+  // uncropped band also lays a 3-word class as one row of three; everything
+  // else (and every smaller class) uses the two-across default.
   var reelPlatforms = { Instagram: 1, TikTok: 1, Facebook: 1, YouTube: 1 };
+  function threeAcross(platform, count) {
+    if (!reelPlatforms[platform]) return false;
+    return count >= 5 || (platform === "TikTok" && count === 3);
+  }
   var platforms = ["X", "Threads", "Pinterest", "Instagram", "TikTok",
                    "Facebook", "YouTube", "Not sure"];
 
@@ -103,7 +109,7 @@ description: "Posted a guess on a Lexi vocabulary quiz? Search any word from it 
     platformsBox.innerHTML = "";
     platforms.forEach(function (p) {
       var a = document.createElement("a");
-      var g3 = reelPlatforms[p] && m.count >= 5;
+      var g3 = threeAcross(p, m.count);
       a.href = "/a/" + m.alias + "/" + (g3 ? "?g=3" : "");
       a.textContent = p;
       platformsBox.appendChild(a);
