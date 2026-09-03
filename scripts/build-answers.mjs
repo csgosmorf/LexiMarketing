@@ -2,6 +2,14 @@
 // class — from the SAME cloud snapshots the shipped app reads (the
 // appConfig/wordData pointer), so the site always shows what players see.
 //
+// Every record holds the FULL class. A post that shows only a SUBSET of the
+// class (the app's dev-only tile subset, posting-kit round 9, Sep 2026)
+// links to the same page with `?w=<letters>` — the full class's lowercase
+// letters for the words it kept — and src/a/a.njk's inline script drops the
+// other tiles, re-letters and re-numbers client-side with a copy of
+// `canonicalOrder` below (the three copies — this one, a.njk, the app's
+// ClassMatchExportModel.canonicalTileOrder — must stay identical).
+//
 // Each record feeds src/a/a.njk, which renders the class's UNLISTED answer
 // page — the reveal Peter links under every social quiz post — plus a
 // per-page Open Graph card (below). Two URL forms per class:

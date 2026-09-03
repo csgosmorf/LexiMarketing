@@ -41,10 +41,17 @@ eleventyComputed:
   {# Tiles in the CANONICAL order — the same arrangement and numbering as
      every posted image, so checking an answer is a glance, not a re-solve.
      ?g=3 lays the grid three across, matching the reel platforms' images
-     (X/Threads/Pinterest post two across, the default). #}
-  <div class="answer-tiles" id="answer-tiles">
+     (X/Threads/Pinterest post two across, the default).
+     ?w=abde (Sep 2026, posting-kit round 9): the post showed a SUBSET of
+     the class — the letters are the FULL class's (alphabetical, lowercase)
+     for the words it kept. The script below drops the other tiles, then
+     re-letters (subset alphabetical → A, B, C…) and re-numbers (the app's
+     canonicalTileOrder over the subset, same seed = the class id) so the
+     key matches the posted grid. Without it a four-tile post would land on
+     a six-tile key with different numbers AND letters. #}
+  <div class="answer-tiles" id="answer-tiles" data-class="{{ a.classID }}">
     {% for w in a.words %}
-    <figure class="answer-tile">
+    <figure class="answer-tile" data-word="{{ w.word }}">
       <img src="{{ w.image }}" alt="Illustration for '{{ w.word }}'{% if w.signature %} — {{ w.signature }}{% endif %}" loading="lazy" width="512" height="512">
       {% if w.signature %}<p class="answer-signature">{{ w.signature }}</p>{% endif %}
       {# One pill carries the whole mapping: picture number, its letter,
@@ -54,8 +61,63 @@ eleventyComputed:
     {% endfor %}
   </div>
   <script>
-    if (new URLSearchParams(location.search).get("g") === "3")
-      document.getElementById("answer-tiles").classList.add("cols-3");
+  (function () {
+    var params = new URLSearchParams(location.search);
+    var grid = document.getElementById("answer-tiles");
+    if (params.get("g") === "3") grid.classList.add("cols-3");
+
+    // ?w= — the posted subset. IDENTICAL to the app's
+    // ClassMatchExportModel.canonicalTileOrder and to
+    // scripts/build-answers.mjs's canonicalOrder (parity-tested there):
+    // Fisher-Yates over the alphabetical list, SplitMix64 seeded with
+    // FNV-1a of the class id, identity rotated away. Change one, change all.
+    var MASK = (1n << 64n) - 1n;
+    function canonicalOrder(classID, sortedWords) {
+      if (sortedWords.length < 2) return sortedWords.slice();
+      var seed = 0xcbf29ce484222325n;
+      for (var i = 0; i < classID.length; i++)
+        seed = ((seed ^ BigInt(classID.charCodeAt(i))) * 0x100000001b3n) & MASK;
+      var state = seed;
+      function next() {
+        state = (state + 0x9e3779b97f4a7c15n) & MASK;
+        var z = state;
+        z = ((z ^ (z >> 30n)) * 0xbf58476d1ce4e5b9n) & MASK;
+        z = ((z ^ (z >> 27n)) * 0x94d049bb133111ebn) & MASK;
+        return z ^ (z >> 31n);
+      }
+      var tiles = sortedWords.slice();
+      for (var k = tiles.length - 1; k >= 1; k--) {
+        var j = Number(next() % BigInt(k + 1));
+        var t = tiles[k]; tiles[k] = tiles[j]; tiles[j] = t;
+      }
+      var identity = tiles.every(function (w, idx) { return w === sortedWords[idx]; });
+      if (identity) tiles.push(tiles.shift());
+      return tiles;
+    }
+
+    var w = params.get("w");
+    if (!w || !/^[a-z]+$/.test(w) || typeof BigInt !== "function") return;
+    var tiles = Array.prototype.slice.call(grid.querySelectorAll(".answer-tile"));
+    // The page's tiles carry the FULL class's letters; map them back.
+    var byLetter = {};
+    tiles.forEach(function (t) {
+      byLetter[t.querySelector(".answer-letter").textContent.trim().toLowerCase()] = t;
+    });
+    var kept = [];
+    w.split("").forEach(function (c) {
+      var t = byLetter[c];
+      if (t && kept.indexOf(t) < 0) kept.push(t);
+    });
+    if (kept.length < 2 || kept.length >= tiles.length) return;
+    tiles.forEach(function (t) { if (kept.indexOf(t) < 0) t.remove(); });
+    var sorted = kept.map(function (t) { return t.getAttribute("data-word"); }).sort();
+    canonicalOrder(grid.getAttribute("data-class"), sorted).forEach(function (word, idx) {
+      var t = kept.filter(function (x) { return x.getAttribute("data-word") === word; })[0];
+      t.querySelector(".answer-tile-num").textContent = String(idx + 1);
+      t.querySelector(".answer-letter").textContent = String.fromCharCode(65 + sorted.indexOf(word));
+      grid.appendChild(t);   // re-append = the subset's canonical order
+    });
+  })();
   </script>
 </section>
 

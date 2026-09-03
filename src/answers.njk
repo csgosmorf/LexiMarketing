@@ -50,14 +50,14 @@ description: "Posted a guess on a Lexi vocabulary quiz? Search any word from it 
   var words = null;      // [{word, alias}] flattened, sorted
   var loading = null;
 
-  // Mirrors the app exporter's `mosaicColumns` rule (ConstellationPanelView):
-  // reel platforms post 5-/6-word grids three across, and TikTok's
-  // uncropped band also lays a 3-word class as one row of three; everything
-  // else (and every smaller class) uses the two-across default.
-  var reelPlatforms = { Instagram: 1, TikTok: 1, Facebook: 1, YouTube: 1 };
+  // Mirrors the app exporter's `mosaicColumns` rule (ConstellationPanelView).
+  // Round 8 (Sep 3 2026): two-across up to four words, THREE-across for
+  // five and six, on every canvas platform — the exporter's three-across
+  // card floor brought the 5/6-word classes back (round 7 had everything
+  // two-across and rejected them). Keep in step with
+  // `ConstellationShareText.mosaicColumns`.
   function threeAcross(platform, count) {
-    if (!reelPlatforms[platform]) return false;
-    return count >= 5 || (platform === "TikTok" && count === 3);
+    return count >= 5;
   }
   var platforms = ["X", "Threads", "Pinterest", "Instagram", "TikTok",
                    "Facebook", "YouTube", "Not sure"];
