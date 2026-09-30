@@ -6,8 +6,11 @@
 - [Overview](https://lexivocab.app/): gameplay, illustrated word cards, and a sky of learned words.
 - [App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587): platform availability and current release information.
 - [Premium](https://lexivocab.app/premium/): contrastive learning drills for supported word groups and additional companion designs.
-- [Lexi vs. Vocabulary](https://lexivocab.app/lexi-vs-vocabulary/): a dated, first-party comparison with Vocabulary by Monkey Taps.
+- [Lexi vs. Vocabulary](https://lexivocab.app/lexi-vs-vocabulary/): a sourced comparison of word discovery, typed in-context recall, adaptive review schedules, and synonym nuance. Vocabulary means the Monkey Taps app, not Vocabulary.com.
 - [Blog](https://lexivocab.app/blog/): practical vocabulary learning guides.
 
 ## Vocabulary and learning
-The word bank has about 20,000 words. Illustrated cards introduce vocabulary with an image, definition, and example sentence. Contrastive learning trains distinctions between easily confused words. Lexi is not affiliated with Monkey Taps. No comparative learning-outcome study is claimed.
+The word bank has about 20,000 words. Illustrated cards introduce vocabulary with an image, definition, and example sentence. Lexi is designed for lasting vocabulary expansion and an active vocabulary for thinking, speaking, and writing. It tracks per-word review progress and due dates, adjusts intervals to performance, and asks users to retrieve words from changing sentence-and-meaning clues. Contrastive learning trains distinctions between easily confused words. Lexi is not affiliated with Monkey Taps. No comparative learning-outcome study is claimed.
+
+## Comparison evidence
+Vocabulary by Monkey Taps emphasizes word discovery, widgets, reminders, collections, and practice. Its August 2026 official blog claims built-in spaced repetition but does not describe adaptive per-word scheduling or a knowledge model. The comparison page separates those public claims from the creator’s hands-on observations of multiple-choice exercises. Lexi’s advantages are explained through its concrete learning mechanics; guaranteed permanent retention and measured superiority are not claimed.

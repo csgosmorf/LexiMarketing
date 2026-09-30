@@ -1,57 +1,83 @@
 ---
 layout: base.njk
-title: "Lexi vs. Vocabulary: which vocabulary app fits you?"
-description: "Compare Lexi: Vocabulary Crosswords with Vocabulary by Monkey Taps. Personalized crossword recall, spaced repetition, synonym nuance, widgets, and daily word discovery."
+title: "Lexi vs. Vocabulary: discovery, lasting recall, and real-world use"
+description: "Vocabulary centers on word discovery. Lexi is a vocabulary learning system built around in-context recall, adaptive per-word reviews, and precise synonym distinctions."
 permalink: /lexi-vs-vocabulary/
 ---
-<p class="eyebrow">Choose how you want to learn</p>
+<p class="eyebrow">From discovering words to having them at your fingertips</p>
 
 # Lexi vs. Vocabulary
 
-**Choose Lexi if you want to practice recalling words in personalized crosswords. Choose Vocabulary by Monkey Taps if you want word discovery woven into your day through widgets and a scrolling word feed.** Both can be useful; they put different experiences at the center.
+**Choose Lexi if your goal is lasting vocabulary expansion: words you can recall when thinking, speaking, and writing. Choose Vocabulary by Monkey Taps if you want a convenient way to discover words through a feed, widgets, and reminders.**
 
-<p class="source-note">Written by Lexi’s creator. Comparison checked September 29, 2026 against the apps’ public descriptions and Lexi’s current features. This is a product comparison, not a study of learning outcomes.</p>
+Vocabulary centers on bringing words into your day. Lexi is a vocabulary learning system: it introduces words, asks you to retrieve them from context, tracks their review progress, and schedules further practice. For building an active vocabulary, that learning loop is the central reason to choose Lexi.
 
-<div class="comparison-table" role="region" aria-label="Vocabulary app comparison" tabindex="0">
+<p class="source-note">Written by Lexi’s creator. Public sources checked September 29, 2026. Practice-format observations come from the creator’s hands-on comparison linked below; app features can change. This compares learning design, not measured head-to-head outcomes.</p>
+
+## Recognizing a word is different from finding it yourself
+
+In a conversation, an essay, or a thought, you usually have a meaning in mind and need the word to come to you. There is no list of four answers to choose from.
+
+Lexi practices that direction: **situation and meaning → retrieve the word → type it**. A clue combines a sentence with a precise meaning; crossing letters offer support. Later reviews use differently phrased clues, so you practice finding the word across contexts rather than memorizing one prompt.
+
+Vocabulary’s fill-in-the-gap and synonym exercises used multiple-choice answers in the creator’s hands-on comparison. Those can help you recognize words and their associations. Lexi’s typed recall more directly practices producing the missing word without seeing it among answer choices—the task you want to get better at when expressing yourself.
+
+{% include "recall-example.njk" %}
+
+The goal is for *rankle* to become available when you want to describe a remark that keeps bothering someone, beyond being familiar when you see it on a screen.
+
+## The learning mechanics compared
+
+<div class="comparison-table" role="region" aria-label="Vocabulary learning system comparison" tabindex="0">
 <table>
-<thead><tr><th scope="col">What matters to you</th><th scope="col">Lexi</th><th scope="col">Vocabulary by Monkey Taps</th></tr></thead>
+<thead><tr><th scope="col">Learning task</th><th scope="col">Lexi</th><th scope="col">Vocabulary by Monkey Taps</th></tr></thead>
 <tbody>
-<tr><th scope="row">Main experience</th><td>Type missing words into crosswords generated for your learning progress.</td><td>Discover words through a feed, widgets, and word games.</td></tr>
-<tr><th scope="row">Choosing words</th><td>A bank of about 20,000 words, with new vocabulary and scheduled reviews in your puzzles.</td><td>Words organized by difficulty and topic, with categories you can choose.</td></tr>
-<tr><th scope="row">Recall practice</th><td>Sentence clues, crossing letters, and typed answers. Clues vary across reviews.</td><td>The public listing includes word games; it does not detail the scheduling behind them.</td></tr>
-<tr><th scope="row">Review scheduling</th><td>Per-word spaced repetition adapts to your performance.</td><td>Adaptive per-word scheduling is not specified in the public listing we checked.</td></tr>
-<tr><th scope="row">Subtle differences</th><td>Premium adds illustrated matching, typing, and nuance drills for supported groups of confusable words.</td><td>The public listing does not specify an equivalent contrastive drill system.</td></tr>
-<tr><th scope="row">Seeing progress</th><td>Learned words become stars in an explorable sky; practiced contrasts form constellations.</td><td>Emphasizes word discovery, personalization, and everyday practice.</td></tr>
-<tr><th scope="row">Getting started</th><td>Free core crosswords and reviews, no ads. Optional Premium.</td><td>Free download with in-app purchases.</td></tr>
+<tr><th scope="row">Find the word from its meaning</th><td>Type the missing word from a sentence and meaning, with crossing letters as support.</td><td>Multiple-choice gap and synonym exercises in the creator’s hands-on comparison.</td></tr>
+<tr><th scope="row">Prepare for a new word</th><td>Illustrated introduction cards connect the word to an evocative image, definition, matching example, and connotation.</td><td>The observed practice flow tested unfamiliar words without a preceding introduction card.</td></tr>
+<tr><th scope="row">Keep track of learning</th><td>Per-word progress and due dates shape your next crossword. A correct answer does not end future review.</td><td>Offers saved collections and practice. Public sources do not explain an adaptive per-word knowledge model.</td></tr>
+<tr><th scope="row">Review over time</th><td>Spaced repetition adjusts each word’s review intervals to your performance.</td><td>Its official blog says spaced repetition is built in; the scheduling mechanism is not described.</td></tr>
+<tr><th scope="row">Use the right synonym</th><td>Premium matching, typing, and nuance drills train differences within groups of confusable words.</td><td>Multiple-choice synonym matching in the hands-on comparison; its site also describes synonyms and related words.</td></tr>
+<tr><th scope="row">See what you have learned</th><td>A learned-word list and word sky: words become stars, and practiced contrasts form constellations.</td><td>Its site describes saved words, collections, and streaks.</td></tr>
+<tr><th scope="row">Discover vocabulary casually</th><td>About 20,000 words to explore through a personalized learning sequence and puzzles.</td><td>Word browsing, difficulty and topic choices, pronunciation, examples, widgets, and reminders.</td></tr>
 </tbody>
 </table>
 </div>
 
-## Try the difference for yourself
+## Built for lasting vocabulary expansion
 
-{% include "recall-example.njk" %}
+Lexi keeps a learning history for each word and uses it to decide what needs practice. Reviews return over time, and their intervals adapt to performance. That makes vocabulary expansion an ongoing system rather than a succession of new words to browse.
 
-Lexi asks you to retrieve and type that word, then returns to it later with another clue. If you enjoy the moment a half-remembered word clicks into place, that is the experience Lexi is built around.
+There is a research reason to emphasize retrieval: a [vocabulary-learning experiment by Karpicke and Roediger](https://pubmed.ncbi.nlm.nih.gov/18276894/) found that continued testing after an initial correct answer improved delayed recall, whereas continued study alone did not. That supports the principle behind repeated retrieval; it does not establish a measured advantage for either app.
 
+Lexi combines that repeated practice with changing sentence contexts and visual introductions. Meaning-linked card art appears again after recalls to reinforce the visual association. Its aim is durable, usable vocabulary: words you can reach for long after first encountering them. As those words accumulate, your sky and learned-word list let you see the vocabulary you have been building. Learning also unlocks animal companions and adjective-based profile designs, giving progress a visible reward.
 
-## When Lexi is a good fit
+## From a broad synonym to the precise word
 
-You like word puzzles, want a review schedule that runs itself, and care about using the right word in context. You also want to practice distinctions such as *frugal* versus *stingy*, rather than stopping at a broad synonym. Those contrastive exercises are part of Premium and cover supported word groups, not the entire word bank.
+*Frugal* and *stingy* both describe reluctance to spend, but they express different judgments. Recognizing that they are related is only the beginning. Using them well means choosing which one fits the person and situation.
 
-## When Vocabulary may suit you better
+Lexi Premium trains those distinctions through illustrated matching and typing drills, plus focused nuance questions. You practice which word belongs to which scene or nuance—not just which two words share a broad meaning. These exercises are built for finer distinctions in how you think, speak, and write.
 
-You want a word on your Lock Screen, a quick scroll through new vocabulary, or difficulty and topic choices for casual discovery. Vocabulary’s public listing emphasizes those conveniences. The absence of a feature from its listing is not proof that it lacks it.
+## Does Vocabulary use spaced repetition?
 
-## What is free in Lexi?
+Vocabulary’s [August 2026 blog post](https://vocabulary.monkeytaps.app/blogs/7-proven-ways-to-build-your-vocabulary-fast) says it has built-in spaced repetition. Its public descriptions do not explain how review intervals adapt to individual performance or how it represents knowledge of each word. The level of personalization is therefore unclear from those sources.
 
-Crosswords, spaced repetition, your word sky, and illustrated word cards are free. Premium adds contrastive training and additional companion designs. [See the current Premium options](/premium/).
+Lexi’s concrete distinction is the combination of adaptive per-word review schedules, typed recall from changing contexts, visual introductions, and contrastive nuance training.
 
-<p><a class="btn btn-big" data-cta="comparison" href="{{ site.appstore }}">Try a Lexi crossword free</a></p>
+## Which should you choose?
+
+**For an active vocabulary you want to retain and use, choose Lexi.** Its learning system is designed around repeatedly bringing the right word to mind, with progress that determines what you practice next. Core crosswords, spaced repetition, illustrated word cards, and your word sky are free, with no ads; contrastive drills and additional companion designs are Premium.
+
+**For easy word discovery woven into everyday screen time, choose Vocabulary.** Its feed, widgets, reminders, pronunciation, and topic choices are useful when browsing and collecting words is your priority. It also offers games and quizzes; it is more than a dictionary, even though discovery is the experience it emphasizes.
+
+<p><a class="btn btn-big" data-cta="comparison" href="{{ site.appstore }}">Build vocabulary you can reach for</a></p>
 
 ## Sources and further reading
 
-- [Vocabulary — Learn words daily: official App Store listing](https://apps.apple.com/us/app/vocabulary-learn-words-daily/id1084540807)
-- [Lexi: Vocabulary Crosswords: App Store listing](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587)
-- [How Lexi uses spaced repetition](/posts/2026-07-03-spaced-repetition-vocabulary-app-without-flashcards/)
+- [Vocabulary: official product page](https://vocabulary.monkeytaps.app/) — discovery, widgets, examples, collections, and practice.
+- [Vocabulary — Learn words daily: official App Store listing](https://apps.apple.com/us/app/vocabulary-learn-words-daily/id1084540807).
+- [Vocabulary: 7 Proven Ways to Build Your Vocabulary Fast](https://vocabulary.monkeytaps.app/blogs/7-proven-ways-to-build-your-vocabulary-fast) — its spaced-repetition claim.
+- [Lexi creator’s hands-on comparison thread](https://x.com/lexivocabapp/status/2093962932606345329) — observations about exercise formats and introductions, rather than an independent effectiveness study.
+- [Karpicke & Roediger, 2008: The critical importance of retrieval for learning](https://pubmed.ncbi.nlm.nih.gov/18276894/).
+- [How Lexi uses spaced repetition](/posts/2026-07-03-spaced-repetition-vocabulary-app-without-flashcards/) · [Frugal vs. stingy](/posts/2026-09-29-frugal-vs-stingy/).
 
-Vocabulary is a product of Monkey Taps. Lexi is not affiliated with Monkey Taps.
+Vocabulary here means the Monkey Taps app, not Vocabulary.com. Lexi is not affiliated with either.
