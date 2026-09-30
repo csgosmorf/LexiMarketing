@@ -10,8 +10,11 @@ layout: base.njk
   <aside class="cta-box">
     <h2>Try the ideas in this post</h2>
     <p>Lexi turns spaced repetition into crossword puzzles generated from the
-    words you're learning — with illustrated word cards for every new word it
-    introduces. Free on iPhone and iPad, no ads.</p>
+    words you're learning — with illustrated word cards. Free on iPhone and iPad, no ads.</p>
     <a class="btn" href="{{ site.appstore }}">Get Lexi on the App Store</a>
   </aside>
 </article>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ title | json | safe }},"description":{{ (description or site.description) | json | safe }},"datePublished":"{{ page.date | isoDate }}","mainEntityOfPage":"{{ site.url }}{{ page.url }}","author":{"@type":"Person","name":"Peter Barnett","url":"https://lexivocab.app/"},"publisher":{"@type":"Organization","name":"Lexi","url":"https://lexivocab.app/"}}
+</script>

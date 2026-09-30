@@ -234,3 +234,106 @@ th, td { text-align: left; padding: 6px 22px 6px 0; border-bottom: 1px solid rgb
   border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 999px;
 }
 .answers-chooser a:hover { border-color: var(--gold); color: var(--gold); }
+
+/* The landing page leads with the product; reading pages keep their familiar width. */
+:root { --muted: #b1adc7; }
+:focus-visible { outline: 3px solid #f0cb7a; outline-offset: 5px; }
+.skip-link { position: absolute; left: 16px; top: -80px; z-index: 10; padding: 10px; background: var(--panel); }
+.skip-link:focus { top: 12px; }
+.btn { color: #101322 !important; background: #e8c982; box-shadow: 0 3px 20px #0002; }
+.btn:hover { background: #f5dcaa; }
+.landing { background: radial-gradient(ellipse at 78% 12%, #28233f 0, transparent 39%), #0e0e18; }
+.landing main, .landing .nav, .landing footer { max-width: 1120px; }
+.landing .nav { padding-top: 24px; }
+.home-hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; align-items: center; padding: 62px 0 68px; }
+.eyebrow { color: #e8c982; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+.home-hero h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(52px, 6.6vw, 78px); line-height: 1.04; letter-spacing: -.045em; margin: 24px 0; }
+.home-hero h1 em { color: #e8c982; font-weight: 400; }
+.hero-lede { max-width: 405px; font-size: 19px; line-height: 1.65; color: #c6c1d8; margin: 0 0 30px; }
+.fine-print { font-size: 12px; color: var(--muted); margin-top: 14px; }
+.text-link { display: inline-flex; gap: 14px; margin-top: 10px; font-size: 14px; color: var(--text); text-decoration: none; }
+.hero-product { overflow: clip; position: relative; height: 548px; display: flex; justify-content: flex-end; align-items: center; isolation: isolate; }
+.hero-product figure { margin: 0; }
+.hero-phone { width: 232px; position: relative; z-index: 2; transform: rotate(5deg); margin-right: 26px !important; }
+.hero-phone img { display: block; width: 100%; height: auto; border: 5px solid #302e42; border-radius: 31px; box-shadow: 0 24px 65px #0008; }
+.hero-product figcaption { color: #e8c982; text-align: center; font-family: Georgia, serif; font-style: italic; margin-top: 10px; }
+.floating-card { position: absolute; width: 210px; left: 24px; top: 65px; z-index: 3; transform: rotate(-9deg); }
+.floating-card img { display: block; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 20px 50px #0007; }
+.orbit { position: absolute; border: 1px solid #bca4ec25; width: 460px; height: 460px; border-radius: 50%; z-index: -1; }
+.orbit-one { transform: rotate(-25deg) scaleY(.63); }
+.orbit-two { transform: rotate(40deg) scaleY(.8); }
+.try-clue { display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px; align-items: center; border-top: 1px solid #ffffff14; border-bottom: 1px solid #ffffff14; padding: 48px 0; }
+.landing h2 { font-family: Georgia, serif; font-weight: 400; line-height: 1.2; letter-spacing: -.025em; font-size: 36px; margin: 15px 0 20px; }
+.try-clue h2 { font-size: 30px; }
+.try-clue p:not(.eyebrow), .loop-grid p, .feature-duo p { color: #bfbacf; font-size: 16px; }
+.sample-clue { background: #1a1929; border: 1px solid #c9b3eb30; border-radius: 18px; padding: 26px 30px; }
+.sample-clue .clue-sentence, .sample-clue .clue-gloss { color: #f1edf8 !important; font-size: 22px !important; font-family: Georgia, serif; line-height: 1.6; text-wrap: balance; }
+.sample-clue .clue-sentence { margin-top: 0; }
+.sample-clue .clue-blank, .sample-clue .clue-pos { color: #e8c982; white-space: nowrap; }
+.sample-clue .clue-blank { display: inline-block; }
+.sample-clue summary { color: #e8c982; font-size: 14px; cursor: pointer; }
+.answer-reveal { letter-spacing: .18em; color: #e8c982; }
+.learning-loop { padding: 70px 0; }
+.loop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; margin-top: 36px; }
+.step-number { color: #9d90c3; font-family: Georgia, serif; font-size: 24px; }
+.loop-grid h3 { font-size: 21px; margin: 10px 0; }
+.loop-grid p { margin: 0; }
+.feature-duo { display: grid; grid-template-columns: .8fr 1fr; gap: 80px; align-items: center; padding: 30px 50px 50px; border-radius: 24px; background: linear-gradient(140deg, #211e35, #141322); border: 1px solid #ffffff12; }
+.sky-preview { text-align: center; }
+.sky-preview video { width: 230px; max-width: 100%; height: auto; border-radius: 24px; display: block; margin: auto; border: 1px solid #ffffff20; }
+.small-note { color: #e8c982 !important; font-size: 14px !important; }
+.nuance-teaser { margin-top: 30px; padding-top: 28px; border-top: 1px solid #ffffff20; }
+.pill { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; border: 1px solid #a292c5; border-radius: 30px; padding: 2px 9px; color: #d9c7ff; }
+.nuance-teaser h3 { font-size: 20px; line-height: 1.4; }
+.nuance-teaser a { font-size: 14px; color: #e8c982; }
+.home-faq { max-width: 730px; margin: 70px auto; }
+.home-faq details { border-bottom: 1px solid #ffffff20; padding: 18px 0; }
+.home-faq summary { cursor: pointer; font-weight: 600; }
+.home-faq details p { font-size: 16px; color: #bfbacf; }
+.closing-cta { text-align: center; padding: 45px 0; }
+.closing-cta h2 { font-size: 42px; margin-bottom: 30px; }
+.home-reading { border-top: 1px solid #ffffff14; margin-top: 40px; padding-top: 20px; }
+.home-reading h2 { font: 14px -apple-system, sans-serif; color: var(--muted); }
+.reading-links { display: flex; gap: 30px; flex-wrap: wrap; }
+.reading-links a { color: var(--text); font-size: 15px; }
+.comparison-table { overflow-x: auto; margin: 30px 0; }
+.comparison-table table { width: 100%; min-width: 540px; }
+.comparison-table th, .comparison-table td { padding: 16px; vertical-align: top; }
+.comparison-table thead { background: var(--panel); }
+.comparison-table th:first-child { width: 23%; }
+.source-note { font-size: 14px; color: var(--muted); }
+@media (max-width: 850px) {
+  .hero-product { height: 470px; }
+  .hero-phone { width: 195px; margin-right: 8px !important; }
+  .floating-card { width: 158px; top: 76px; }
+  .orbit { width: 320px; height: 360px; }
+  .feature-duo { gap: 36px; padding: 30px; }
+  .try-clue { gap: 26px; }
+}
+@media (max-width: 700px) {
+  .landing .nav { padding-top: 15px; }
+  .nav nav a.nav-secondary { display: none; }
+  .home-hero { grid-template-columns: 1fr; padding: 32px 0 30px; gap: 15px; }
+  .home-hero h1 { font-size: 48px; margin: 20px 0; }
+  .hero-lede { font-size: 17px; max-width: 340px; margin-bottom: 24px; }
+  .hero-product { width: 330px; max-width: 100%; height: 390px; justify-self: center; }
+  .hero-phone { width: 166px; margin-right: 26px !important; }
+  .hero-phone img { border-radius: 24px; }
+  .floating-card { width: 158px; top: 64px; left: 15px; }
+  .try-clue, .feature-duo { grid-template-columns: 1fr; }
+  .try-clue { padding: 32px 0; gap: 16px; }
+  .sample-clue { padding: 22px; }
+  .learning-loop { padding: 42px 0; }
+  .landing h2 { font-size: 30px; }
+  .loop-grid { grid-template-columns: 1fr; gap: 25px; margin-top: 24px; }
+  .loop-grid article { padding-left: 48px; position: relative; }
+  .step-number { position: absolute; left: 0; top: 4px; }
+  .loop-grid h3 { margin-top: 0; }
+  .feature-duo { padding: 28px 22px; gap: 28px; }
+  .sky-preview video { width: 190px; }
+  .home-faq { margin: 40px 0; }
+  .closing-cta { padding: 25px 0; }
+  .closing-cta .btn-big { font-size: 16px; padding: 14px 22px; }
+  .btn-big { white-space: normal; text-align: center; }
+  .orbit { max-width: 100%; }
+}

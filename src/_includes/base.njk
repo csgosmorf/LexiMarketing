@@ -44,17 +44,18 @@
     }
   </script>
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav">
     <a class="wordmark" href="/">Lexi</a>
     <nav>
-      <a href="/answers/">Answers</a>
-      <a href="/premium/">Premium</a>
-      <a href="/blog/">Blog</a>
+      <a class="nav-secondary" href="/answers/">Answers</a>
+      <a class="nav-secondary" href="/premium/">Premium</a>
+      <a href="/lexi-vs-vocabulary/">Compare</a>
       <a class="btn btn-small" href="{{ site.appstore }}">Get the app</a>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     {{ content | safe }}
   </main>
   <footer>
@@ -63,11 +64,13 @@
       <a href="/answers/">Answers</a> ·
       <a href="/premium/">Premium</a> ·
       <a href="/blog/">Blog</a> ·
+      <a href="/lexi-vs-vocabulary/">Compare</a> ·
       <a href="/feed.xml">RSS</a> ·
       <a href="/privacy/">Privacy</a> ·
       <a href="/terms/">Terms</a>
     </p>
     <p class="muted">Made by a solo developer who wanted a vocabulary app he'd actually keep opening.</p>
   </footer>
+<script src="/js/site.js" defer></script>
 </body>
 </html>

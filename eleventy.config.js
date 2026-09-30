@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
   // app-ads.txt at the domain root is what AdMob's crawler actually checks
   // (per the IAB spec it fetches <marketing-URL domain>/app-ads.txt).
   eleventyConfig.addPassthroughCopy({
-    "src/css": "css", "src/img": "img", "src/app-ads.txt": "app-ads.txt",
+    "src/js": "js", "src/llms.txt": "llms.txt", "src/css": "css", "src/img": "img", "src/app-ads.txt": "app-ads.txt",
     // Universal links for the app's Stripe-checkout return pages (/premium/*)
     // + the Cloudflare _headers file that serves the AASA as JSON.
     "src/.well-known": ".well-known", "src/_headers": "_headers", "src/_redirects": "_redirects",
@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
     if (data.draft) return false;
   });
 
+  eleventyConfig.addFilter("json", value => JSON.stringify(value).replace(/</g, "\\u003c"));
   eleventyConfig.addFilter("readableDate", (d) =>
     new Date(d).toLocaleDateString("en-US", {
       year: "numeric", month: "long", day: "numeric", timeZone: "UTC",

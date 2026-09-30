@@ -1,161 +1,88 @@
 ---
 layout: base.njk
-description: "Lexi runs real spaced repetition underneath crossword puzzles generated from the words you're learning. Fill-in-the-blank clues, illustrated word cards, automatic grading — and every word you learn becomes a star in your sky. Free on iPhone and iPad."
+bodyClass: landing
+isHome: true
+description: "Build an English vocabulary you can actually recall. Lexi turns spaced repetition into personal crosswords, with illustrated word cards and synonym practice. Free on iPhone and iPad."
 ---
-<section class="hero">
-  <h1>Permanently expand your vocabulary — through crossword puzzles generated for you.</h1>
-  <p class="lede">Lexi runs real spaced repetition underneath dynamically
-  generated crosswords. Reviews are fill-in-the-blank sentences, not card
-  flips. Grading is inferred from your solve speed. Every new word is
-  introduced with an illustrated card <em>before</em> you're asked to recall
-  it. And everything you've learned hangs overhead as a sky of stars.</p>
-  <p>
-    <a class="btn btn-big" href="{{ site.appstore }}">Download free on the App&nbsp;Store</a>
-  </p>
-  <p class="muted">iPhone &amp; iPad · free · no ads · no account required</p>
+<section class="home-hero">
+  <div class="hero-copy">
+    <p class="eyebrow">A bigger vocabulary. One puzzle at a time.</p>
+    <h1>Find the words.<br><em>Keep them.</em></h1>
+    <p class="hero-lede">Turn words you almost know into words you can actually use. Play crosswords that remember what you need to practice.</p>
+    <a class="btn btn-big" data-cta="hero" href="{{ site.appstore }}">Download Lexi free</a>
+    <p class="fine-print">iPhone &amp; iPad · No ads · No sign-up form</p>
+    <a class="text-link" href="#try-it">Try a clue first <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="hero-product">
+    <div class="orbit orbit-one" aria-hidden="true"></div>
+    <div class="orbit orbit-two" aria-hidden="true"></div>
+    <figure class="floating-card">
+      <img src="/img/card-iridescent.jpg" width="720" height="924" alt="An illustrated Lexi word card introduces iridescent with a shimmering soap bubble, a definition, and an example sentence.">
+      <figcaption>Meet a word.</figcaption>
+    </figure>
+    <figure class="hero-phone">
+      <img src="/img/shot-board.jpg" width="720" height="1558" fetchpriority="high" alt="A real Lexi crossword: recall words from a sentence and meaning, then type them into the board.">
+      <figcaption>Make it yours.</figcaption>
+    </figure>
+  </div>
 </section>
 
-<section>
-  <h2>This is an introduction in Lexi</h2>
-  <div class="clue-demo">
-    <img class="card-shot" src="/img/card-iridescent.jpg" width="720" height="924" loading="lazy"
-         alt="Lexi's word card for 'iridescent': a soap bubble shimmering violet, orange, and blue against a night sky; below, the definition 'showing a spectrum of colors that vary with viewing angle' and the example 'The soap bubble floated gently, its surface iridescent in the sunlight.'">
-    <div>
-      <p>The first time you meet a word, you aren't quizzed on it — you're
-      dealt its card: art built to evoke the meaning, the definition, an
-      example that matches the picture. <em>Iridescent</em> arrives as a soap
-      bubble catching the light, not a vocabulary item.</p>
+<section class="try-clue" id="try-it" aria-labelledby="try-title">
+  <div>
+    <p class="eyebrow">A little taste of Lexi</p>
+    <h2 id="try-title">You know the feeling.<br>Can you find the word?</h2>
+    <p>Read the sentence and its meaning, then recall the word.</p>
+  </div>
+  {% include "recall-example.njk" %}
+</section>
+
+<section class="learning-loop" aria-labelledby="loop-title">
+  <p class="eyebrow">Less setup. More learning.</p>
+  <h2 id="loop-title">Your next puzzle knows you.</h2>
+  <div class="loop-grid">
+    <article><span class="step-number">01</span><h3>Meet it</h3><p>Discover a word in context. Illustrated cards bring new vocabulary to life before a puzzle.</p></article>
+    <article><span class="step-number">02</span><h3>Recall it</h3><p>Find the missing word in a sentence. Crossing letters help when it’s on the tip of your tongue.</p></article>
+    <article><span class="step-number">03</span><h3>Keep it</h3><p>Spaced repetition brings words back when they’re due. Your progress shapes the next crossword.</p></article>
+  </div>
+</section>
+
+<section class="feature-duo">
+  <div class="sky-preview">
+    <video controls muted playsinline preload="none" poster="/img/shot-home.jpg" width="600" height="1236" aria-label="Explore Lexi’s sky of learned words"><source src="/img/demo-sky.mp4" type="video/mp4"></video>
+  </div>
+  <div>
+    <p class="eyebrow">Look how far you’ve come</p>
+    <h2>A sky full of<br>words you’ve learned.</h2>
+    <p>Every learned word becomes a star. Explore your sky, build streaks, and unlock animal companions as you grow.</p>
+    <p class="small-note">20,000 words to explore. Your own pace.</p>
+    <div class="nuance-teaser">
+      <span class="pill">With Premium</span>
+      <h3>Frugal. Stingy. There’s a difference.</h3>
+      <p>Practice the nuances between easily confused words with illustrated matching and typing drills.</p>
+      <a href="/lexi-vs-vocabulary/">See how Lexi compares <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>…and this is a review</h2>
-  <div class="clue-demo">
-    <img src="/img/clue-rankle-1.jpg" width="786" height="600" loading="lazy"
-         alt="A Lexi clue exactly as it appears in-game: 'The coach's jab after the loss still [verb]d everyone in the locker room.' Hint: keep hurting inwardly; make someone bitter or annoyed.">
-    <div>
-      <p>Days later, spaced repetition brings <em>rankle</em> back as a
-      fill-in-the-blank sentence plus a hint — recall from a situation, the
-      way you'll actually use it. Each word cycles through several
-      differently-phrased clues on <strong>one</strong> schedule, so there's
-      no phrasing to memorize; what sticks is the word.</p>
-    </div>
-  </div>
+<section class="home-faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">A few things to know.</h2>
+  <details><summary>Is Lexi free?</summary><p>Yes. Crosswords, spaced repetition, word cards, and your word sky are free, with no ads. Optional Premium adds contrastive learning drills and more companion designs. <a href="/premium/">See Premium details.</a></p></details>
+  <details><summary>Who is it for?</summary><p>English-speaking readers, writers, word-game fans, and advanced English learners who want more precise words at their fingertips. Lexi is available on iPhone and iPad.</p></details>
+  <details><summary>Is this a daily crossword?</summary><p>Your crosswords are generated from your vocabulary and review schedule. You can play whenever you like; you aren’t limited to one shared puzzle per day.</p></details>
 </section>
 
-<section>
-  <h2>Type it in, and the word pays off</h2>
-  <div class="clue-demo">
-    <video class="phone-shot" src="/img/demo-flow.mp4" width="600" height="1236"
-           autoplay muted loop playsinline preload="metadata"
-           aria-label="A word being typed into a Lexi crossword: a near-miss triggers an 'Almost — check for typos' toast, then the solved word earns +3 months on its schedule and its art flashes over the board"></video>
-    <div>
-      <p>Crossing letters scaffold what you half-know, and near-misses are
-      caught as typos, not failures. Solve a review and the word's schedule
-      stretches — here, three months — with its art flashing over the
-      board.</p>
-    </div>
-  </div>
+<section class="closing-cta">
+  <p class="eyebrow">Your first puzzle is waiting</p>
+  <h2>A word game that<br>leaves you with more words.</h2>
+  <a class="btn btn-big" data-cta="closing" href="{{ site.appstore }}">Get Lexi for iPhone &amp; iPad</a>
+  <p class="fine-print">Start free. Discover what sticks.</p>
 </section>
 
-<section>
-  <h2>Why not flashcards?</h2>
-  <ul class="features">
-    <li><strong>Definition cards overfit.</strong> The prompt never changes, so you end up recognizing the definition's phrasing instead of commanding the word. Lexi varies the surface every repetition and keeps the schedule unified.</li>
-    <li><strong>Self-grading is decision fatigue.</strong> No Again/Hard/Good/Easy: your solve speed — normalized for clue and word length — raises or lowers each word's ease automatically.</li>
-    <li><strong>Cold first reps are brutal.</strong> Flashcards quiz you on words you've never seen. In Lexi, every first encounter starts with the word's illustrated card: image, definition, pictured example sentence, connotation tags.</li>
-    <li><strong>Clue quality can't be improvised.</strong> Each clue is produced by a creator → validator → guesser → reviser pipeline, up to seven revisions before acceptance — and keeps improving through in-app feedback.</li>
-  </ul>
+<section class="home-reading">
+  <h2>For the curious</h2>
+  <div class="reading-links"><a href="/lexi-vs-vocabulary/">Lexi vs. Vocabulary <span aria-hidden="true">↗</span></a><a href="/blog/">Ideas for learning better <span aria-hidden="true">↗</span></a></div>
 </section>
-
-<section>
-  <h2>Everything you've learned hangs overhead</h2>
-  <div class="clue-demo">
-    <video class="phone-shot" src="/img/demo-sky.mp4" width="600" height="1236"
-           autoplay muted loop playsinline preload="metadata"
-           aria-label="Lexi's home sky zooming from the rocket into a constellation linking transient, transitory, ephemeral, and fugacious — each star carrying its word's art, colored by how soon the word is due"></video>
-    <div>
-      <p>The home screen is a sky. Every learned word is a star, its color
-      tracking the schedule — cool while safely known, warm as a review comes
-      due. Words you've trained apart are drawn as constellations, and the
-      rocket launches your next puzzle.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Confusable words get trained apart</h2>
-  <div class="clue-demo">
-    <video class="phone-shot" src="/img/demo-drill.mp4" width="600" height="1236"
-           autoplay muted loop playsinline preload="metadata"
-           aria-label="A Lexi match drill being solved: dale, glen, dell, and dingle dragged onto four illustrated valley scenes, correct matches ringing green and a miss ringing red"></video>
-    <div>
-      <p>Knowing <em>proclivity</em> isn't much use if you can't say how it
-      differs from <em>propensity</em>. Nuance cards state the difference
-      precisely, match drills pit whole clusters — <em>dale, glen, dell,
-      dingle</em> — against illustrated scenes, and typing a word's confusable
-      cousin surfaces the distinction at the moment of the mix-up. Lexi
-      Constella, keeper of your word-sky, teaches on the spot.</p>
-      <p>Contrastive training and the full companion wardrobe are
-      <a href="/premium/">Premium</a>; the puzzles, the reviews, and your sky
-      are free.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>What's inside</h2>
-  <ul class="features">
-    <li><strong>20,000 words</strong> ordered roughly by rarity — maximal real-world utility per unit time spent</li>
-    <li><strong>Synonym nuance:</strong> tap any two synonyms to read precisely how they differ</li>
-    <li><strong>Collections that steer generation:</strong> save words, and puzzles prioritize words with related meanings</li>
-    <li><strong>Multiplayer, leaderboards, achievements</strong>, an activity heat map — and streaks you can <em>rekindle</em> after a slip, so one bad week doesn't erase months</li>
-    <li><strong>Companions you earn by learning:</strong> nine animals styled by adjectives from the word bank, each unlocked by answering its word</li>
-    <li><strong>The Observatory:</strong> a star log for every word, community posts, and study partners near your level</li>
-    <li><strong>Reminders fired from words actually due</strong>, not a fixed daily nag</li>
-    <li><strong>Profiles</strong> under one iCloud account — separate progress for you and your kid on the same iPad</li>
-  </ul>
-</section>
-
-<section class="shots">
-  <img src="/img/shot-home.jpg" width="720" height="1558" loading="lazy"
-       alt="Lexi home screen: the word of the day 'exuberate' on an illustrated card above a 16-day streak row, with a constellation-patterned rocket as the Play button over a starfield of learned words">
-  <img src="/img/shot-board.jpg" width="720" height="1558" loading="lazy"
-       alt="A Lexi crossword mid-review: solved words including proclivity, rectitude, lampoon, and intermittent glowing in different colors on a starfield board, with a fill-in-the-blank clue and hint below">
-  <img src="/img/feature-lexi.jpg" width="720" height="1558" loading="lazy"
-       alt="Mid-crossword in Lexi: the player typed 'propensity' where a synonym belongs, and a card explains that propensity fits a broadly observed pattern whereas this word fits an inward taste or appetite in a person — with Lexi Constella, the app's mystic teacher, seated on the board">
-</section>
-
-<section>
-  <h2>Who it's for</h2>
-  <p>People who want a bigger English vocabulary and a system that actually
-  runs itself: readers and writers, GRE/SAT preppers, advanced ESL learners
-  going from fluent to eloquent, and word-game players who want the time to
-  count for something. English, on iPhone and iPad.</p>
-  <p><a class="btn" href="{{ site.appstore }}">Get Lexi — free</a></p>
-</section>
-
-{% set posts = collections.posts | reverse %}
-{% if posts.length > 0 %}
-<section>
-  <h2>From the blog</h2>
-  <ul class="post-list">
-    {% for p in posts.slice(0, 5) %}
-    <li><a href="{{ p.url }}">{{ p.data.title }}</a> <span class="muted">{{ p.date | readableDate }}</span></li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Lexi: Vocabulary Crosswords",
-  "operatingSystem": "iOS",
-  "applicationCategory": "EducationalApplication",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-  "url": "{{ site.appstore }}"
-}
+{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://lexivocab.app/#app","name":"Lexi: Vocabulary Crosswords","operatingSystem":"iOS, iPadOS","applicationCategory":"EducationalApplication","description":"An English vocabulary app with personalized crosswords, spaced repetition, illustrated word cards, and optional Premium contrastive learning drills.","url":"https://lexivocab.app/","downloadUrl":"{{ site.appstore }}","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free download and core vocabulary practice; optional Premium purchases."},"screenshot":"https://lexivocab.app/img/shot-board.jpg"}
 </script>

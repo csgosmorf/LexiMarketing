@@ -1,0 +1,13 @@
+# Lexi: Vocabulary Crosswords
+
+> An English vocabulary app for iPhone and iPad. Personalized crossword puzzles combine typed sentence-based recall with per-word spaced repetition. The core app is free with optional Premium purchases.
+
+## Product
+- [Overview](https://lexivocab.app/): gameplay, illustrated word cards, and a sky of learned words.
+- [App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587): platform availability and current release information.
+- [Premium](https://lexivocab.app/premium/): contrastive learning drills for supported word groups and additional companion designs.
+- [Lexi vs. Vocabulary](https://lexivocab.app/lexi-vs-vocabulary/): a dated, first-party comparison with Vocabulary by Monkey Taps.
+- [Blog](https://lexivocab.app/blog/): practical vocabulary learning guides.
+
+## Vocabulary and learning
+The word bank has about 20,000 words. Illustrated cards introduce vocabulary with an image, definition, and example sentence. Contrastive learning trains distinctions between easily confused words. Lexi is not affiliated with Monkey Taps. No comparative learning-outcome study is claimed.
