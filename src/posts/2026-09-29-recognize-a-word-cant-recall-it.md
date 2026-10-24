@@ -41,8 +41,8 @@ That is the practical idea behind spaced repetition. You can manage it yourself,
 
 Keep the session small enough that you will want to return. A backlog does not need to become a demand to finish everything today.
 
-## Where Lexi fits
+## Where WordLab fits
 
-Lexi puts those missing-word sentences into personal crosswords. Crossing letters offer help, and a per-word review schedule selects what comes back. The clues change across reviews, so you get practice beyond one familiar sentence.
+WordLab puts those missing-word sentences into personal crosswords. Crossing letters offer help, and a per-word review schedule selects what comes back. The clues change across reviews, so you get practice beyond one familiar sentence.
 
-Illustrated cards introduce new vocabulary, and Premium contrastive drills focus on distinctions between confusable words. [Try a clue on the homepage](/#try-it), or [compare Lexi with Vocabulary](/lexi-vs-vocabulary/).
+Illustrated cards introduce new vocabulary, and Premium contrastive drills focus on distinctions between confusable words. [Try a clue on the homepage](/#try-it), or [compare WordLab with Vocabulary](/wordlab-vs-vocabulary/).

@@ -2,7 +2,7 @@
 title: "How to Choose a Vocabulary Builder App for Adults: Recognition Is Not Recall"
 description: "Choose a vocabulary builder app for adults by the mechanism that matters: producing words from meaning and context, not recognizing visible answers."
 date: "2026-10-12"
-tags: ["vocabulary builder app for adults", "vocabulary apps", "spaced repetition", "retrieval practice", "Lexi"]
+tags: ["vocabulary builder app for adults", "vocabulary apps", "spaced repetition", "retrieval practice", "WordLab"]
 targetKeyword: "vocabulary builder app for adults"
 draft: false
 ---
@@ -28,21 +28,21 @@ Most vocabulary products sit somewhere on this table:
 
 Recognition is not useless. You need an introduction before recall can start. But recognition should be the *input* stage, not the whole product.
 
-Lexi starts from that distinction: every unseen word gets a word-card introduction before the puzzle, then spaced repetition is delivered through dynamically generated crossword puzzles. The review event is not "do I remember this definition?" It is "can I produce the word that fits this sentence and this meaning-evoking hint?"
+WordLab starts from that distinction: every unseen word gets a word-card introduction before the puzzle, then spaced repetition is delivered through dynamically generated crossword puzzles. The review event is not "do I remember this definition?" It is "can I produce the word that fits this sentence and this meaning-evoking hint?"
 
 ## Definitions introduce; clues train
 
 Take *infer*.
 
-<img src="/img/cards/infer-a573276c.jpg" width="1536" height="1024" loading="lazy" alt="Lexi word card for infer: draw a conclusion from evidence">
+<img src="/img/cards/infer-a573276c.jpg" width="1536" height="1024" loading="lazy" alt="WordLab word card for infer: draw a conclusion from evidence">
 
 The card definition is "draw a conclusion from evidence." The example sentence is: "From the muddy tracks, we infer that the fox crossed after the rain."
 
 That is a good introduction because it binds the word to a mental operation: evidence → conclusion. But if the app stops there, you have mainly practiced recognizing *infer* when it is already in front of you.
 
-Lexi then moves the word into fill-in-the-blank crossword clues: a sentence with a missing answer plus a hint that evokes the meaning. The blank matters. Crossing letters help, but they do not do the retrieval for you; you still have to supply the word that belongs in the context.
+WordLab then moves the word into fill-in-the-blank crossword clues: a sentence with a missing answer plus a hint that evokes the meaning. The blank matters. Crossing letters help, but they do not do the retrieval for you; you still have to supply the word that belongs in the context.
 
-That is why I built Lexi as puzzles rather than conventional flashcards. A crossword slot makes recall concrete. There is a correct surface form. You either retrieve it, retrieve it slowly, typo it, or fail to retrieve it.
+That is why I built WordLab as puzzles rather than conventional flashcards. A crossword slot makes recall concrete. There is a correct surface form. You either retrieve it, retrieve it slowly, typo it, or fail to retrieve it.
 
 ## A fixed card lets you overfit to the card
 
@@ -50,7 +50,7 @@ A single flashcard has a hidden problem: it becomes its own training artifact. I
 
 This is overfitting: learning the surface pattern of the practice item instead of the underlying word.
 
-Lexi avoids that by cycling multiple differently phrased clues per word — currently 3 per word — under one spaced-repetition schedule per word. The schedule tracks the underlying item; the clues are different surface forms of it. That forces the useful invariant to survive: the meaning, connotation, and contextual fit of the word.
+WordLab avoids that by cycling multiple differently phrased clues per word — currently 3 per word — under one spaced-repetition schedule per word. The schedule tracks the underlying item; the clues are different surface forms of it. That forces the useful invariant to survive: the meaning, connotation, and contextual fit of the word.
 
 The clue pipeline exists to make that possible at scale. Clues are produced by an iterative Creator → Validator → Guesser → Reviser pipeline using frontier language models. A clue can undergo up to 7 revisions before acceptance, against quality criteria refined through repeated in-app revision rounds.
 
@@ -62,7 +62,7 @@ Spaced repetition works by scheduling reviews near the point where recall is bec
 
 That creates a second task: self-diagnosis. Was the answer easy because you knew it, because the prompt was obvious, or because you half-recognized the card from yesterday?
 
-Lexi infers SRS grading automatically from solve timing: fast, normal, or slow, normalized for clue and word length. No self-grading buttons. No review-session bookkeeping. The puzzle is the measurement event.
+WordLab infers SRS grading automatically from solve timing: fast, normal, or slow, normalized for clue and word length. No self-grading buttons. No review-session bookkeeping. The puzzle is the measurement event.
 
 This also makes practice less vague. A word is not merely "seen." It is introduced, attempted in context, timed, scheduled, and reattempted through different clues.
 
@@ -78,14 +78,14 @@ If you are choosing a vocabulary builder, ask these questions before you install
 4. **Is recall contextual?** Adult vocabulary is used in sentences, not in isolated definition recitation.
 5. **Is measurement automatic?** If every review requires a judgment call, friction accumulates.
 
-Lexi’s answer is specific: illustrated word cards styled like collectible game cards for introduction, then crossword-based spaced repetition for contextual recall. The dataset has 20,000 words ordered roughly by rarity for maximal real-world utility per unit time spent; about 3,000 currently have pipeline-grade clues, and the first ~1,500 have illustrated word cards.
+WordLab’s answer is specific: illustrated word cards styled like collectible game cards for introduction, then crossword-based spaced repetition for contextual recall. The dataset has 20,000 words ordered roughly by rarity for maximal real-world utility per unit time spent; about 3,000 currently have pipeline-grade clues, and the first ~1,500 have illustrated word cards.
 
-## Who Lexi is for
+## Who WordLab is for
 
-Lexi is for adults who want practice that makes words easier to *produce*, not merely easier to recognize.
+WordLab is for adults who want practice that makes words easier to *produce*, not merely easier to recognize.
 
 If you already read English well but want sharper output, the same distinction applies. Recognition-heavy tools can confirm that you have seen a word. Contextual recall asks you to place it.
 
-Do not bother with Lexi yet if you need Android, another language, or full polysemy coverage today: it is English-only, iOS-only, and one sense per word so far.
+Do not bother with WordLab yet if you need Android, another language, or full polysemy coverage today: it is English-only, iOS-only, and one sense per word so far.
 
-**CTA:** If you want a vocabulary builder app for adults built around contextual recall instead of definition-flipping, [download Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587).
+**CTA:** If you want a vocabulary builder app for adults built around contextual recall instead of definition-flipping, [download WordLab on the App Store](https://apps.apple.com/app/id6740172587).

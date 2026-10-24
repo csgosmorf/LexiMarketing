@@ -10,4 +10,4 @@ eleventyExcludeFromCollections: true
 
 You left checkout before paying, so nothing happened. Premium is waiting whenever you want it — Settings → Premium in the app.
 
-<p><a class="btn btn-big" href="lexi://premium/return">Back to Lexi</a></p>
+<p><a class="btn btn-big" href="lexi://premium/return">Back to WordLab</a></p>

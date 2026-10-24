@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <script>
     // PostHog — only on the live domain so localhost previews never pollute analytics.
-    if (location.hostname === "lexivocab.app" || location.hostname === "www.lexivocab.app") {
+    if (location.hostname === "wordlab.nz" || location.hostname === "www.wordlab.nz") {
       var phs = document.createElement("script");
       phs.async = true;
       phs.src = "https://us-assets.i.posthog.com/static/array.js";
@@ -47,11 +47,11 @@
 <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav">
-    <a class="wordmark" href="/">Lexi</a>
+    <a class="wordmark" href="/">WordLab</a>
     <nav>
       <a class="nav-secondary" href="/answers/">Answers</a>
       <a class="nav-secondary" href="/premium/">Premium</a>
-      <a href="/lexi-vs-vocabulary/">Compare</a>
+      <a href="/wordlab-vs-vocabulary/">Compare</a>
       <a class="btn btn-small" href="{{ site.appstore }}">Get the app</a>
     </nav>
   </header>
@@ -64,7 +64,7 @@
       <a href="/answers/">Answers</a> ·
       <a href="/premium/">Premium</a> ·
       <a href="/blog/">Blog</a> ·
-      <a href="/lexi-vs-vocabulary/">Compare</a> ·
+      <a href="/wordlab-vs-vocabulary/">Compare</a> ·
       <a href="/feed.xml">RSS</a> ·
       <a href="/privacy/">Privacy</a> ·
       <a href="/terms/">Terms</a>

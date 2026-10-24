@@ -1,6 +1,6 @@
 ---
 title: "GRE Vocabulary App: Flashcards, Quizlet, Cartoons, or Contextual Crossword Recall?"
-description: "A mechanism-first comparison of GRE vocab workflows: flashcards, Quizlet decks, mnemonics, Anki, and Lexi\u2019s contextual crossword recall."
+description: "A mechanism-first comparison of GRE vocab workflows: flashcards, Quizlet decks, mnemonics, Anki, and WordLab\u2019s contextual crossword recall."
 date: "2026-10-08"
 tags: ["GRE vocabulary", "vocabulary app", "spaced repetition", "crossword vocabulary", "Anki alternatives"]
 targetKeyword: "gre vocabulary app"
@@ -49,13 +49,13 @@ That is also the burden. For vocabulary, the learner has to decide what the card
 
 The mechanism matters: memorizing a definition trains recall of that definition’s phrasing, not necessarily the word as it appears in prose. I made the longer argument in [Apps Like Anki for Vocabulary Should Remove Review Homework](/posts/2026-10-02-apps-like-anki-for-vocabulary/). For GRE prep, time spent designing cards competes with time spent reading, reviewing mistakes, and taking practice sections.
 
-## Lexi uses contextual crossword recall instead of definition flipping
+## WordLab uses contextual crossword recall instead of definition flipping
 
-Lexi teaches vocabulary through spaced repetition delivered as dynamically generated crossword puzzles. The clue is a fill-in-the-blank sentence plus a meaning-evoking hint, so recall happens in context rather than against a static definition. You do not merely decide whether *equivocal* looks familiar; you have to place the word where the sentence and crossings support it.
+WordLab teaches vocabulary through spaced repetition delivered as dynamically generated crossword puzzles. The clue is a fill-in-the-blank sentence plus a meaning-evoking hint, so recall happens in context rather than against a static definition. You do not merely decide whether *equivocal* looks familiar; you have to place the word where the sentence and crossings support it.
 
 I built the clue system to avoid fixed-prompt overfitting. Every word cycles through multiple differently phrased clues—currently three per word—under one spaced-repetition schedule per word. They are different surface forms of a single underlying item, so there is no single sentence to memorize.
 
-The schedule is quieter than button-based flashcard SRS. Lexi infers grading automatically from solve timing—fast, normal, or slow, normalized for clue and word length. No Again/Hard/Good/Easy buttons. No self-grading decision fatigue.
+The schedule is quieter than button-based flashcard SRS. WordLab infers grading automatically from solve timing—fast, normal, or slow, normalized for clue and word length. No Again/Hard/Good/Easy buttons. No self-grading decision fatigue.
 
 The word set is built for advanced vocabulary: 20,000 words ordered roughly by rarity, with about 3,000 words currently covered by pipeline-grade clues. The first roughly 1,500 words have illustrated word cards: collectible-game-card-style introductions with an image, definition, example sentence, and connotation tags. Every word you have never seen gets its word-card introduction before the puzzle, so you are never quizzed cold on a word you could not possibly know.
 
@@ -65,10 +65,10 @@ That ordering matters for GRE prep. A deadline punishes random wandering. Rarity
 
 Use flashcards when you need rapid first-pass exposure. Use Quizlet when you already trust the deck and want low-friction repetitions. Use cartoons and mnemonics when a word refuses to stick. Use Anki when you want total control and are willing to maintain the deck.
 
-Use Lexi when your failure mode is different: you recognize words but cannot reliably retrieve them in context. That is the common advanced-vocab gap. I made every system in Lexi and have personally learned 1,300+ words with it.
+Use WordLab when your failure mode is different: you recognize words but cannot reliably retrieve them in context. That is the common advanced-vocab gap. I made every system in WordLab and have personally learned 1,300+ words with it.
 
-Lexi is free on iPhone and iPad with no ads at all. It is English-only and iOS-only. It also uses one sense per word so far, so if your prep depends on exhaustive polysemy, pair it with a dictionary or course.
+WordLab is free on iPhone and iPad with no ads at all. It is English-only and iOS-only. It also uses one sense per word so far, so if your prep depends on exhaustive polysemy, pair it with a dictionary or course.
 
-If you want a full GRE course, Lexi should not be your only tool. Use it as the vocabulary-retention layer beside official practice and verbal strategy work.
+If you want a full GRE course, WordLab should not be your only tool. Use it as the vocabulary-retention layer beside official practice and verbal strategy work.
 
-**Try Lexi:** [Download Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587) and train advanced vocabulary through spaced-repetition crossword recall.
+**Try WordLab:** [Download WordLab on the App Store](https://apps.apple.com/app/id6740172587) and train advanced vocabulary through spaced-repetition crossword recall.

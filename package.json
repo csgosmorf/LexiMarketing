@@ -1,7 +1,7 @@
 {
   "name": "lexi-marketing-site",
   "private": true,
-  "description": "Landing page + blog for Lexi: Vocabulary Crosswords",
+  "description": "Landing page + blog for WordLab: Vocabulary Builder",
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve"

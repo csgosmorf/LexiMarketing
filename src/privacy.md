@@ -6,17 +6,18 @@ permalink: /privacy/
 
 # Privacy Policy
 
-*Effective August 18, 2026. This is the same policy shown inside the app (Settings → Legal). If they ever differ, the in-app copy players accepted governs their use.*
+*Effective October 24, 2026. This is the same policy shown inside the app (Settings → Legal). If they ever differ, the in-app copy players accepted governs their use.*
 
 ## Overview
 
-This policy describes what Lexi: Vocabulary Crosswords collects, how it is used, and the choices you have. The short version: no email, password, or real name is required; no advertising; no sale of personal data. Lexi's social features are public by design, and this policy tells you exactly which parts are visible to others.
+This policy describes what WordLab: Vocabulary Builder collects, how it is used, and the choices you have. The short version: no email, password, or real name is required; no advertising; no sale of personal data. WordLab's social features are public by design, and this policy tells you exactly which parts are visible to others.
 
 ## Data we collect
 
 - **Account identifiers:** an anonymous authentication token and an identifier derived from your device's iCloud account. We never see your Apple ID email or password.
 - **Profile data you provide:** display name, chosen avatar, and optional bio and city.
 - **Learning and gameplay data:** puzzle history, review schedules, streaks, achievements, statistics, and preferences.
+- **App usage data:** how you move through the app — which screens and sheets you open, where you tap, swipe or pinch and when, onboarding steps, and the choices you make in menus — with your device model, OS version, language and time zone, linked to an install identifier and your account. It never includes the content of direct messages, what you type on the keyboard, or the exact path of your gestures.
 - **User content:** profile comments and direct messages you send, and reports you submit.
 - **Purchase state:** which subscriptions or entitlements are active. Purchases through the App Store are handled by Apple; in the United States, subscriptions bought through our web checkout are handled by Stripe, which gives us a customer and subscription identifier, the subscription's status and renewal date, and the email address you enter at checkout for receipts. We never receive your card number.
 - **Device data in reports:** bug and feedback reports include basic device model and OS version to help us fix problems.
@@ -32,11 +33,11 @@ Direct messages are delivered through our database and are visible to you and th
 
 ## How we use data
 
-To operate the game and its social features, sync your progress across your devices via iCloud and our database, maintain leaderboards, deliver messages and invitations, process referral rewards and entitlements, improve word quality from your reports, and protect the service from abuse. We do not use your data for third-party advertising, we do not sell it, and we do not use it to train AI models.
+To operate the game and its social features, sync your progress across your devices via iCloud and our database, maintain leaderboards, deliver messages and invitations, process referral rewards and entitlements, improve word quality from your reports, understand where the app is confusing or hard to use so we can improve it, and protect the service from abuse. We do not use your data for third-party advertising, we do not sell it, and we do not use it to train AI models.
 
 ## Where data lives
 
-Lexi uses Apple iCloud/CloudKit (progress sync, identity), Apple StoreKit (purchases), and Google Firebase (database, file storage, cloud functions, anonymous authentication, push delivery) as service providers. Data is stored on their infrastructure, primarily in the United States, and is protected in transit by encryption.
+WordLab uses Apple iCloud/CloudKit (progress sync, identity), Apple StoreKit (purchases), and Google Firebase (database, file storage, cloud functions, anonymous authentication, push delivery) as service providers. Data is stored on their infrastructure, primarily in the United States, and is protected in transit by encryption.
 
 ## Retention and deletion
 
@@ -44,7 +45,7 @@ Gameplay and profile data is kept while your account is active. Deleting a profi
 
 ## Children
 
-Lexi's online features are not directed to children under 13, and we do not knowingly collect personal information from them. If you believe a child under 13 is using the online features, contact us and we will delete the associated data.
+WordLab's online features are not directed to children under 13, and we do not knowingly collect personal information from them. If you believe a child under 13 is using the online features, contact us and we will delete the associated data.
 
 ## Your rights
 
@@ -56,7 +57,7 @@ We use industry-standard safeguards: encrypted transport, server-side security r
 
 ## Changes to this policy
 
-We will update this policy as Lexi evolves. Material changes are presented in-app for review before continued use. The effective date above reflects the latest revision.
+We will update this policy as WordLab evolves. Material changes are presented in-app for review before continued use. The effective date above reflects the latest revision.
 
 ## Contact
 

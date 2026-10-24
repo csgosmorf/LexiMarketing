@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Back to Lexi
+title: Back to WordLab
 description: Return to the app.
 permalink: /premium/return/
 eleventyExcludeFromCollections: true
@@ -10,4 +10,4 @@ eleventyExcludeFromCollections: true
 
 Any billing change you just made is saved. Head back to the app.
 
-<p><a class="btn btn-big" href="lexi://premium/return">Back to Lexi</a></p>
+<p><a class="btn btn-big" href="lexi://premium/return">Back to WordLab</a></p>

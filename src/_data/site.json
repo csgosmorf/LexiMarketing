@@ -1,10 +1,10 @@
 {
-  "name": "Lexi: Vocabulary Crosswords",
-  "shortName": "Lexi",
-  "url": "https://lexivocab.app",
-  "description": "Lexi teaches you vocabulary with spaced repetition delivered through crossword puzzles generated just for you. Free on iPhone and iPad.",
-  "appstore": "https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587",
+  "name": "WordLab: Vocabulary Builder",
+  "shortName": "WordLab",
+  "url": "https://wordlab.nz",
+  "description": "WordLab teaches you vocabulary with spaced repetition delivered through crossword puzzles generated just for you. Free on iPhone and iPad.",
+  "appstore": "https://apps.apple.com/app/id6740172587",
   "appId": "6740172587",
-  "privacyPolicy": "https://lexivocab.app/privacy/",
-  "terms": "https://lexivocab.app/terms/"
+  "privacyPolicy": "https://wordlab.nz/privacy/",
+  "terms": "https://wordlab.nz/terms/"
 }

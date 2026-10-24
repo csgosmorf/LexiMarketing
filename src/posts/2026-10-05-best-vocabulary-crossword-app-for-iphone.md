@@ -1,6 +1,6 @@
 ---
 title: "Vocabulary Crossword Apps for iPhone: What Actually Trains Retention"
-description: "Compare iPhone crossword and vocabulary apps by mechanism: daily grids, flashcards, and Lexi\u2019s spaced-repetition crosswords."
+description: "Compare iPhone crossword and vocabulary apps by mechanism: daily grids, flashcards, and WordLab\u2019s spaced-repetition crosswords."
 date: "2026-10-05"
 tags: ["vocabulary crossword", "vocabulary apps", "iPhone apps", "spaced repetition", "crossword puzzles"]
 targetKeyword: "best vocabulary crossword app for iPhone"
@@ -23,7 +23,7 @@ Use three questions before downloading anything in this category:
 - Does it reschedule each word after you solve or miss it?
 - Does the clue force the word in context, or merely ask you to recognize a definition?
 
-That separates the field into three categories: entertainment-first crossword apps, flashcard vocabulary apps, and the smaller intersection Lexi is built to occupy. For the category mechanics, see [what a vocabulary crossword is](/posts/2026-10-03-what-is-a-vocabulary-crossword/).
+That separates the field into three categories: entertainment-first crossword apps, flashcard vocabulary apps, and the smaller intersection WordLab is built to occupy. For the category mechanics, see [what a vocabulary crossword is](/posts/2026-10-03-what-is-a-vocabulary-crossword/).
 
 ## Daily crossword apps optimize for finished grids, not retained words
 
@@ -33,15 +33,15 @@ If a difficult word returns later, it returns because the constructor or generat
 
 That creates the core problem. The format *feels* educational because it contains words, while the scheduling layer that would make it educational is absent.
 
-<img src="/img/cards/paradox-aa5582a7.jpg" width="1536" height="1024" loading="lazy" alt="Lexi word card for paradox: a statement that seems to contradict itself">
+<img src="/img/cards/paradox-aa5582a7.jpg" width="1536" height="1024" loading="lazy" alt="WordLab word card for paradox: a statement that seems to contradict itself">
 
-Lexi’s word card for *paradox* defines it as “a statement that seems to contradict itself,” with the example sentence: “A single line on the page poses a paradox: \"This sentence is a lie.\"” That is the kind of word knowledge a puzzle can reinforce — but only if the word is placed on a schedule after the first encounter.
+WordLab’s word card for *paradox* defines it as “a statement that seems to contradict itself,” with the example sentence: “A single line on the page poses a paradox: \"This sentence is a lie.\"” That is the kind of word knowledge a puzzle can reinforce — but only if the word is placed on a schedule after the first encounter.
 
 Daily crossword apps are right when your goal is recreation. They are structurally weak when your goal is vocabulary growth with high real-world utility per unit time spent.
 
 ## Flashcard vocabulary apps schedule memory but waste the puzzle surface
 
-Flashcard vocabulary apps solve the scheduling problem and usually lose the puzzle advantage. Spaced repetition is the right backbone; I use it as Lexi’s backbone. The failure mode is prompt overfitting: learning the card’s fixed phrasing instead of learning the word.
+Flashcard vocabulary apps solve the scheduling problem and usually lose the puzzle advantage. Spaced repetition is the right backbone; I use it as WordLab’s backbone. The failure mode is prompt overfitting: learning the card’s fixed phrasing instead of learning the word.
 
 A definition-front card for *paradox* can train “a statement that seems to contradict itself” → *paradox*. Useful, but narrow. Real reading does not present definitions. It presents sentences where the word has to fit the situation.
 
@@ -49,9 +49,9 @@ Flashcards also create grading tax. Again, Hard, Good, Easy looks small until ev
 
 Anki-style self-made decks are the right tool for arbitrary material — anatomy, kanji, private facts. For English vocabulary, the stronger mechanism is contextual recall with scheduling hidden underneath. I wrote more on that in [A Spaced Repetition Vocabulary App Without Flashcards](/posts/2026-07-03-spaced-repetition-vocabulary-app-without-flashcards/).
 
-## Lexi puts one spaced-repetition schedule under many crossword clues
+## WordLab puts one spaced-repetition schedule under many crossword clues
 
-I built Lexi around dynamically generated vocabulary crosswords, not static lists with a game skin. Each word lives on one spaced-repetition schedule. Around that schedule, Lexi cycles multiple differently phrased fill-in-the-blank clues — currently 3 per word — plus a meaning-evoking hint.
+I built WordLab around dynamically generated vocabulary crosswords, not static lists with a game skin. Each word lives on one spaced-repetition schedule. Around that schedule, WordLab cycles multiple differently phrased fill-in-the-blank clues — currently 3 per word — plus a meaning-evoking hint.
 
 Different surface forms, one underlying item. That matters because there is no single clue sentence to memorize. You have to retrieve the word across contexts.
 
@@ -59,9 +59,9 @@ Every word you have never seen gets a word-card introduction before the puzzle. 
 
 The clue pipeline is deliberately mechanical: Creator → Validator → Guesser → Reviser, using frontier language models. A clue can undergo up to 7 revisions before acceptance, against quality criteria refined through repeated in-app revision rounds. Definitions, clues, and images are continuously revised from in-app user feedback via regular updates rather than left as a static deck.
 
-Solving also grades itself. Lexi infers fast, normal, or slow recall from solve timing, normalized for clue and word length. No Again/Hard/Good/Easy buttons. No self-grading decision fatigue. The crossword answer is the retrieval attempt.
+Solving also grades itself. WordLab infers fast, normal, or slow recall from solve timing, normalized for clue and word length. No Again/Hard/Good/Easy buttons. No self-grading decision fatigue. The crossword answer is the retrieval attempt.
 
-Lexi is free on iPhone and iPad with no ads at all. I made it as a solo developer and have personally learned 1,300+ words with it.
+WordLab is free on iPhone and iPad with no ads at all. I made it as a solo developer and have personally learned 1,300+ words with it.
 
 ## The comparison is category-fit, not feature count
 
@@ -69,12 +69,12 @@ Lexi is free on iPhone and iPad with no ads at all. I made it as a solo develope
 |---|---|---|
 | Daily crossword games | Recreation, clue wit, grid completion | Word exposure is not scheduled per learner, so retention is accidental. |
 | Flashcard vocabulary apps | Scheduled review of known cards | Fixed prompts invite phrasing overfitting, and manual grading adds review homework. |
-| Lexi | Crossword retrieval under spaced repetition | Each word is scheduled, introduced before testing, and recalled through multiple contextual clues. |
+| WordLab | Crossword retrieval under spaced repetition | Each word is scheduled, introduced before testing, and recalled through multiple contextual clues. |
 
 Feature lists obscure the central issue. Leaderboards, streaks, archives, and themes can make an app pleasant. They do not make vocabulary stick unless the app tracks words, schedules them, and forces contextual recall.
 
-Lexi has word-game machinery too: multiplayer crosswords with friends, leaderboards, streaks, achievements, an activity heat map, typo detection, and notifications fired from words actually due rather than fixed times. Those features matter because they keep the learner solving. The retention mechanism remains the schedule under the grid.
+WordLab has word-game machinery too: multiplayer crosswords with friends, leaderboards, streaks, achievements, an activity heat map, typo detection, and notifications fired from words actually due rather than fixed times. Those features matter because they keep the learner solving. The retention mechanism remains the schedule under the grid.
 
-The honest cut: skip Lexi if you want newspaper-style trivia, cryptic clueplay, Android, languages other than English, or full polysemy coverage today; Lexi is English-only, iOS-only, and currently trains one sense per word.
+The honest cut: skip WordLab if you want newspaper-style trivia, cryptic clueplay, Android, languages other than English, or full polysemy coverage today; WordLab is English-only, iOS-only, and currently trains one sense per word.
 
-**Try Lexi:** [Download Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587) if you want iPhone/iPad puzzle time where the crossword is the retrieval engine and spaced repetition decides what comes back next.
+**Try WordLab:** [Download WordLab on the App Store](https://apps.apple.com/app/id6740172587) if you want iPhone/iPad puzzle time where the crossword is the retrieval engine and spaced repetition decides what comes back next.

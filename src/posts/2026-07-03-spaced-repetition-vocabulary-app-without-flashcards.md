@@ -1,15 +1,15 @@
 ---
 title: "A Spaced Repetition Vocabulary App Without Flashcards"
-description: "Lexi puts spaced repetition into personalized crosswords. Practice typed recall with changing sentence clues, without building or grading your own flashcard decks."
+description: "WordLab puts spaced repetition into personalized crosswords. Practice typed recall with changing sentence clues, without building or grading your own flashcard decks."
 date: "2026-07-03"
 updated: "2026-09-29"
 tags: ["spaced repetition", "vocabulary app", "crossword puzzles"]
 draft: false
 ---
 
-**Lexi is a spaced repetition vocabulary app for iPhone and iPad that delivers reviews through personalized crosswords.** You type a missing word from a sentence, with crossing letters to help. The app manages each word’s review schedule.
+**WordLab is a spaced repetition vocabulary app for iPhone and iPad that delivers reviews through personalized crosswords.** You type a missing word from a sentence, with crossing letters to help. The app manages each word’s review schedule.
 
-Flashcards can also support recall and spaced practice. Lexi offers a different format for people who enjoy puzzles or would rather not build and grade their own decks.
+Flashcards can also support recall and spaced practice. WordLab offers a different format for people who enjoy puzzles or would rather not build and grade their own decks.
 
 ## What a review looks like
 
@@ -23,7 +23,7 @@ The next review can use a different sentence. The word keeps one schedule across
 
 ## What the schedule does
 
-Lexi tracks words individually and brings them into puzzles when they are due. Its grading uses your solve time, adjusted for clue and word length, to help adapt the schedule. You do not need to choose a difficulty rating after each answer.
+WordLab tracks words individually and brings them into puzzles when they are due. Its grading uses your solve time, adjusted for clue and word length, to help adapt the schedule. You do not need to choose a difficulty rating after each answer.
 
 This is an estimate of recall difficulty, not a direct measurement of memory. Distractions and typing speed can affect a session.
 
@@ -35,12 +35,12 @@ The bank contains about 20,000 words to explore.
 
 ## When similar words keep getting mixed up
 
-Learning a definition is only part of choosing the right word. *Frugal* and *stingy* both involve spending little, but carry different judgments. Lexi Premium includes contrastive matching, typing, and nuance drills for supported word groups.
+Learning a definition is only part of choosing the right word. *Frugal* and *stingy* both involve spending little, but carry different judgments. WordLab Premium includes contrastive matching, typing, and nuance drills for supported word groups.
 
 [Try the distinction between frugal and stingy](/posts/2026-09-29-frugal-vs-stingy/).
 
 ## A format you want to come back to
 
-The practical choice is a routine you are willing to repeat. If you enjoy designing prompts and studying a particular subject, a flashcard system may suit you. If you want ready-made vocabulary practice inside a word puzzle, Lexi is worth trying.
+The practical choice is a routine you are willing to repeat. If you enjoy designing prompts and studying a particular subject, a flashcard system may suit you. If you want ready-made vocabulary practice inside a word puzzle, WordLab is worth trying.
 
-Core crosswords and spaced repetition are free, with no ads. [Try a clue before downloading](/#try-it), or [compare Lexi with Vocabulary by Monkey Taps](/lexi-vs-vocabulary/).
+Core crosswords and spaced repetition are free, with no ads. [Try a clue before downloading](/#try-it), or [compare WordLab with Vocabulary by Monkey Taps](/wordlab-vs-vocabulary/).

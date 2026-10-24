@@ -37,4 +37,4 @@ Write two sentences about someone spending very little. In one, make the choice 
 
 Return to the pair later and try recalling the words without looking. The useful question is not simply “Do these words relate to money?” It is “What judgment does this sentence call for?”
 
-Lexi applies that idea through sentence-based crosswords and, with Premium, contrastive drills for supported word groups. [See how Lexi compares with Vocabulary](/lexi-vs-vocabulary/), or start with a free crossword.
+WordLab applies that idea through sentence-based crosswords and, with Premium, contrastive drills for supported word groups. [See how WordLab compares with Vocabulary](/wordlab-vs-vocabulary/), or start with a free crossword.

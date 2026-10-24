@@ -6,3 +6,7 @@
 # /a/<slug>/ answer pages are unlisted; the bare directory is not a place.
 /a / 302
 /a/ / 302
+
+# The comparison page took the new name (Oct 2026 rename to WordLab).
+/lexi-vs-vocabulary /wordlab-vs-vocabulary/ 301
+/lexi-vs-vocabulary/ /wordlab-vs-vocabulary/ 301

@@ -1,6 +1,6 @@
 ---
 title: "Crossword Vocabulary in English Works When the Clue Forces Recall"
-description: "Why contextual crossword clues train usable vocabulary recall, plus a small puzzle and the mechanism Lexi uses to turn generated crosswords into spaced repetition."
+description: "Why contextual crossword clues train usable vocabulary recall, plus a small puzzle and the mechanism WordLab uses to turn generated crosswords into spaced repetition."
 date: "2026-10-01"
 tags: ["vocabulary crosswords", "English vocabulary", "spaced repetition", "advanced ESL", "retrieval practice"]
 targetKeyword: "crossword vocabulary in English"
@@ -106,20 +106,20 @@ The correct unit is the underlying word, not a single clue. Multiple clue phrasi
 
 That is the design problem behind [a spaced repetition vocabulary app without flashcards](/posts/2026-07-03-spaced-repetition-vocabulary-app-without-flashcards/): keep the scheduling power, remove the flashcard-shaped cue.
 
-## Lexi turns generated crosswords into a vocabulary system
+## WordLab turns generated crosswords into a vocabulary system
 
-The mini puzzle above is hand-built. Lexi has to solve the harder version: generate contextual vocabulary crosswords repeatedly without collapsing into fixed-card memorization.
+The mini puzzle above is hand-built. WordLab has to solve the harder version: generate contextual vocabulary crosswords repeatedly without collapsing into fixed-card memorization.
 
-I built Lexi around that mechanism. It teaches vocabulary through spaced repetition delivered as dynamically generated crossword puzzles. The clues are fill-in-the-blank sentences plus a meaning-evoking hint, so recall happens in context rather than against a bare definition.
+I built WordLab around that mechanism. It teaches vocabulary through spaced repetition delivered as dynamically generated crossword puzzles. The clues are fill-in-the-blank sentences plus a meaning-evoking hint, so recall happens in context rather than against a bare definition.
 
 Each word cycles through multiple differently phrased clues, currently 3 per word, under one spaced-repetition schedule. That matters. *Discreet* should not become “the donor-list clue.” It should survive new scenes, new syntax, and new neighboring words.
 
-Lexi does not quiz you cold on words you could not possibly know. Every word you have never seen gets a word-card introduction before the puzzle: image, definition, example sentence matching the image, and connotation tags. The crossword then tests retrieval after introduction, not clairvoyance.
+WordLab does not quiz you cold on words you could not possibly know. Every word you have never seen gets a word-card introduction before the puzzle: image, definition, example sentence matching the image, and connotation tags. The crossword then tests retrieval after introduction, not clairvoyance.
 
-The grading is automatic. Lexi infers spaced-repetition performance from solve timing: fast, normal, or slow, normalized for clue and word length. It does that instead of asking for Again/Hard/Good/Easy self-grades after every answer. The learner solves; the schedule updates behind the scenes.
+The grading is automatic. WordLab infers spaced-repetition performance from solve timing: fast, normal, or slow, normalized for clue and word length. It does that instead of asking for Again/Hard/Good/Easy self-grades after every answer. The learner solves; the schedule updates behind the scenes.
 
 The clue pipeline is built to protect clue quality: Creator → Validator → Guesser → Reviser, using frontier language models. A clue can undergo up to 7 revisions before acceptance, against quality criteria refined through repeated in-app revision rounds. The dataset contains 20,000 words ordered roughly by rarity for maximal real-world utility per unit time spent. About 3,000 currently have pipeline-grade clues, and the first ~1,500 have illustrated word cards.
 
-Do not bother if you need Android, another language, or full polysemy training today; Lexi is English-only, iOS-only, and one sense per word so far.
+Do not bother if you need Android, another language, or full polysemy training today; WordLab is English-only, iOS-only, and one sense per word so far.
 
-**Try Lexi:** [Download Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587) if you want crossword vocabulary in English with generated contextual clues, word-card introductions, and spaced repetition underneath.
+**Try WordLab:** [Download WordLab on the App Store](https://apps.apple.com/app/id6740172587) if you want crossword vocabulary in English with generated contextual clues, word-card introductions, and spaced repetition underneath.

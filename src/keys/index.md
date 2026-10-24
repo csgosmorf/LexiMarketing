@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Claim your Premium key
-description: Follow @lexivocabapp, comment "key" on the giveaway post, and claim your Lexi Premium key.
+description: Follow @lexivocabapp, comment "key" on the giveaway post, and claim your WordLab Premium key.
 permalink: /keys/
 eleventyExcludeFromCollections: true
 ---

@@ -1,19 +1,19 @@
 ---
-title: "Does Quizlet Do Spaced Repetition? Quizlet vs. Lexi for Vocabulary"
-description: "Does Quizlet do spaced repetition? Compare Quizlet\u2019s set-based study modes with Lexi\u2019s word-level contextual SRS for vocabulary recall."
+title: "Does Quizlet Do Spaced Repetition? Quizlet vs. WordLab for Vocabulary"
+description: "Does Quizlet do spaced repetition? Compare Quizlet\u2019s set-based study modes with WordLab\u2019s word-level contextual SRS for vocabulary recall."
 date: "2026-10-17"
-tags: ["Quizlet", "spaced repetition", "vocabulary app", "flashcards", "Lexi"]
+tags: ["Quizlet", "spaced repetition", "vocabulary app", "flashcards", "WordLab"]
 targetKeyword: "does quizlet do spaced repetition"
 draft: false
 ---
 
-Does Quizlet do spaced repetition? In the loose sense, yes: Quizlet offers [Flashcards](https://quizlet.com/features/flashcards) and [Learn mode](https://quizlet.com/features/learn), so you can revisit terms over time. In the stricter vocabulary-training sense, no. Quizlet’s public workflow is organized around study sets and modes; Lexi keeps one spaced-repetition schedule per word and tests recall with rotating contextual clues. That difference matters when the goal is not finishing a deck, but making a word available when you read, write, or take an exam.
+Does Quizlet do spaced repetition? In the loose sense, yes: Quizlet offers [Flashcards](https://quizlet.com/features/flashcards) and [Learn mode](https://quizlet.com/features/learn), so you can revisit terms over time. In the stricter vocabulary-training sense, no. Quizlet’s public workflow is organized around study sets and modes; WordLab keeps one spaced-repetition schedule per word and tests recall with rotating contextual clues. That difference matters when the goal is not finishing a deck, but making a word available when you read, write, or take an exam.
 
-## Quizlet reviews sets; Lexi schedules words
+## Quizlet reviews sets; WordLab schedules words
 
 Use the strict definition, because it predicts transfer. A vocabulary SRS should track memory state per word, test retrieval at expanding intervals, and vary prompts enough that you cannot memorize one card’s wording.
 
-Quizlet’s feature pages center on sets you open and study in different modes. Lexi schedules the word itself. Every word has one spaced-repetition schedule, and review arrives as a crossword clue: a fill-in-the-blank sentence plus a meaning-evoking hint. Recall happens in context, not against a definition.
+Quizlet’s feature pages center on sets you open and study in different modes. WordLab schedules the word itself. Every word has one spaced-repetition schedule, and review arrives as a crossword clue: a fill-in-the-blank sentence plus a meaning-evoking hint. Recall happens in context, not against a definition.
 
 The practical question is simple: after you learn *obdurate*, what becomes due next? In a set-based workflow, you return to a collection and pick a mode. In a word-level SRS, the item itself becomes due, and the app builds the session around due words.
 
@@ -21,9 +21,9 @@ The practical question is simple: after you learn *obdurate*, what becomes due n
 
 Quizlet is useful when the asset is the set itself: a class list, a shared deck, a teacher’s exact terminology. Vocabulary study has a different shape. The list does not end, and review time is scarce.
 
-Lexi avoids deck maintenance by starting from a built dataset: 20,000 words ordered roughly by rarity for maximal real-world utility per unit time spent. About 3,000 currently have pipeline-grade clues, and the first ~1,500 have illustrated word cards. Every unseen word gets its word-card introduction before the puzzle, so you are never quizzed cold on a word you could not possibly know.
+WordLab avoids deck maintenance by starting from a built dataset: 20,000 words ordered roughly by rarity for maximal real-world utility per unit time spent. About 3,000 currently have pipeline-grade clues, and the first ~1,500 have illustrated word cards. Every unseen word gets its word-card introduction before the puzzle, so you are never quizzed cold on a word you could not possibly know.
 
-<img src="/img/cards/reconcile-3a8c7b51.jpg" width="1536" height="1024" loading="lazy" alt="Lexi word card for reconcile: make (one thing) compatible with (another)">
+<img src="/img/cards/reconcile-3a8c7b51.jpg" width="1536" height="1024" loading="lazy" alt="WordLab word card for reconcile: make (one thing) compatible with (another)">
 
 The card for *reconcile* defines it as “make (one thing) compatible with (another)” and gives: “She worked late after the baby slept, trying to reconcile ambition with the demands of new motherhood.” The image, definition, sentence, and later crossword clue all point at the same underlying word from different angles.
 
@@ -31,23 +31,23 @@ The card for *reconcile* defines it as “make (one thing) compatible with (anot
 
 An SRS is only as good as its grade signal. Definition cards invite false fluency: the answer feels nearby, so you count it as known. That lengthens the interval for an association that was recognized, not retrieved.
 
-Lexi removes the self-grading button. SRS grading is inferred automatically from solve timing: fast, normal, or slow, normalized for clue and word length. No Again/Hard/Good/Easy buttons. The system grades the part that matters: how much retrieval friction the word produced during use.
+WordLab removes the self-grading button. SRS grading is inferred automatically from solve timing: fast, normal, or slow, normalized for clue and word length. No Again/Hard/Good/Easy buttons. The system grades the part that matters: how much retrieval friction the word produced during use.
 
 ## Fixed card wording causes overfitting
 
 A single front/back card can turn into a password. You stop retrieving *the word* and start retrieving the answer to that card’s phrasing. That is overfitting: performance rises on the training prompt without transferring cleanly to new sentences.
 
-<img src="/img/cards/substantiate-3e1f3373.jpg" width="1536" height="1024" loading="lazy" alt="Lexi word card for substantiate: establish or strengthen as with new evidence or facts">
+<img src="/img/cards/substantiate-3e1f3373.jpg" width="1536" height="1024" loading="lazy" alt="WordLab word card for substantiate: establish or strengthen as with new evidence or facts">
 
 The *substantiate* card says “establish or strengthen as with new evidence or facts” and gives: “Security footage will substantiate his claim about being home.” In a crossword review, the blank forces the productive move: security footage will _____ his claim. Crossings constrain spelling, but they do not hand you the word. The task is recall.
 
-Lexi’s clue system attacks that directly. Every word cycles through multiple differently phrased clues, currently three per word, under one spaced-repetition schedule per word. Different surface forms, one underlying item. If you hesitate on *reconcile*, the word gets the scheduling consequence; you do not split one memory across several cards.
+WordLab’s clue system attacks that directly. Every word cycles through multiple differently phrased clues, currently three per word, under one spaced-repetition schedule per word. Different surface forms, one underlying item. If you hesitate on *reconcile*, the word gets the scheduling consequence; you do not split one memory across several cards.
 
 Clue variation is generated by an iterative Creator → Validator → Guesser → Reviser pipeline using frontier language models. A clue can undergo up to seven revisions before acceptance, against quality criteria refined through repeated in-app revision rounds. The point is controlled variation: no fixed sentence to memorize, no definition phrasing to parrot.
 
-## Quizlet is for shared sets; Lexi is for vocabulary recall
+## Quizlet is for shared sets; WordLab is for vocabulary recall
 
-| Decision point | Quizlet flashcard-set study | Lexi |
+| Decision point | Quizlet flashcard-set study | WordLab |
 |---|---|---|
 | Unit of study | A set of terms and definitions | A word with one SRS schedule |
 | Prompt | Set-based cards and study modes | Fill-in-the-blank crossword clue plus meaning hint |
@@ -56,10 +56,10 @@ Clue variation is generated by an iterative Creator → Validator → Guesser �
 | Transfer risk | Fixed wording can become the remembered object | Three clue phrasings per word reduce prompt overfitting |
 | Context | Present only if the set includes it | Built into every clue |
 
-Quizlet fits best when you need a shared set or a teacher’s exact wording. Lexi fits best when you want words to become usable without deck administration.
+Quizlet fits best when you need a shared set or a teacher’s exact wording. WordLab fits best when you want words to become usable without deck administration.
 
 ## Who shouldn’t bother
 
-Lexi is English-only and iOS-only. It trains one sense per word so far, and word-card images cover the first ~1,500 words. If you need polysemy drills or Android support today, wait. If what you need is a class Quizlet set that mirrors a course exactly, do not switch.
+WordLab is English-only and iOS-only. It trains one sense per word so far, and word-card images cover the first ~1,500 words. If you need polysemy drills or Android support today, wait. If what you need is a class Quizlet set that mirrors a course exactly, do not switch.
 
-**Try Lexi:** If what you wanted from Quizlet was word-level spaced repetition for vocabulary without deck maintenance, Lexi is free on iPhone and iPad with no ads: [download Lexi on the App Store](https://apps.apple.com/us/app/lexi-vocabulary-crosswords/id6740172587).
+**Try WordLab:** If what you wanted from Quizlet was word-level spaced repetition for vocabulary without deck maintenance, WordLab is free on iPhone and iPad with no ads: [download WordLab on the App Store](https://apps.apple.com/app/id6740172587).
