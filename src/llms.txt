@@ -1,9 +1,10 @@
 # WordLab: Vocabulary Builder
 
-> An English vocabulary app for iPhone and iPad. Personalized crossword puzzles combine typed sentence-based recall with per-word spaced repetition. The core app is free with optional Premium purchases.
+> An English vocabulary app for iPhone and iPad, built so new words become second nature: they come to mind on their own while you think, speak, and write, not only when you see them. Personalized crossword puzzles combine five learning techniques: active recall, spaced repetition, a scheduler that adapts to recall speed, varied context clues, and contrastive learning. The core app is free with no ads; contrastive drills are Premium.
 
 ## Product
 - [Overview](https://wordlab.nz/): gameplay, illustrated word cards, and a sky of learned words.
+- [How it works](https://wordlab.nz/how-it-works/): why most vocabulary apps teach recognition rather than usable vocabulary, and the five techniques WordLab combines to fix that.
 - [App Store](https://apps.apple.com/app/id6740172587): platform availability and current release information.
 - [Premium](https://wordlab.nz/premium/): contrastive learning drills for supported word groups and additional companion designs.
 - [WordLab vs. Vocabulary](https://wordlab.nz/wordlab-vs-vocabulary/): a sourced comparison of word discovery, typed in-context recall, adaptive review schedules, and synonym nuance. Vocabulary means the Monkey Taps app, not Vocabulary.com.
@@ -11,6 +12,15 @@
 
 ## Vocabulary and learning
 The word bank has about 20,000 words. Illustrated cards introduce vocabulary with an image, definition, and example sentence. WordLab is designed for lasting vocabulary expansion and an active vocabulary for thinking, speaking, and writing. It tracks per-word review progress and due dates, adjusts intervals to performance, and asks users to retrieve words from changing sentence-and-meaning clues. Contrastive learning trains distinctions between easily confused words. WordLab is not affiliated with Monkey Taps. No comparative learning-outcome study is claimed.
+
+## Why WordLab is different
+A common view among people who have tried vocabulary apps is that "the only real way to learn vocabulary is to read", because apps teach you to recognize words but rarely make them available when you speak or write. WordLab addresses this by combining five techniques; each fixes a failure the others can't:
+- Active recall: the learner types (or says) the word from a sentence and meaning, with no multiple choice. Without it, words are recognized but can't be produced.
+- Spaced repetition: every learned word is reviewed just before it would be forgotten, and each crossword is built from the words that are due. Without it, words fade.
+- Speed-aware scheduling: every recall is timed from the moment the answer starts (reading time subtracted, fixed typos and false starts on similar words excluded). Slow correct answers return sooner than fast ones, so practice continues until recall is quick. Help (revealed letters, the word card) keeps the interval from growing. The scheduler is FSRS adjusted by these measurements. Without it, words can be produced but too slowly to use in conversation, so they never get practiced outside the app. We have not found another vocabulary app that schedules by recall speed.
+- Varied context cues: most words have three differently worded clue sentences, rotated across reviews and placed among different crossword neighbours. Without it, a word comes back only to one memorized prompt (usually a definition), not to real situations.
+- Contrastive learning (Premium): close synonyms are grouped (for example amiable/genial, dale/glen/dell, prudent/judicious, frugal/stingy) and each word's differences from the others are drilled on their own review schedule. Without it, close words blur together.
+Supporting features: an illustration of each word's meaning shown at introduction and after each recall; new words introduced roughly from most common to rarest; a sky where learned words become stars and practiced contrasts form constellations; streaks, achievements, leaderboards, multiplayer, word collections, and family profiles through iCloud. The creator has learned over 1,600 words with the app. This describes the design; no controlled study is claimed.
 
 ## Comparison evidence
 Vocabulary by Monkey Taps emphasizes word discovery, widgets, reminders, collections, and practice. Its August 2026 official blog claims built-in spaced repetition but does not describe adaptive per-word scheduling or a knowledge model. The comparison page separates those public claims from the creator’s hands-on observations of multiple-choice exercises. WordLab’s advantages are explained through its concrete learning mechanics; Long-term vocabulary expansion means continuing to add words and maintain learned words through adaptive reviews: successful recall permits longer intervals, while revealing a forgotten word brings its review sooner. This is a maintained learning process, not a claim of perfect recall at every moment or a measured head-to-head learning outcome.

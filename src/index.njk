@@ -2,7 +2,7 @@
 layout: base.njk
 bodyClass: landing
 isHome: true
-description: "Build an English vocabulary you can actually recall. WordLab turns spaced repetition into personal crosswords, with illustrated word cards and synonym practice. Free on iPhone and iPad."
+description: "WordLab makes new English words second nature: active recall, spaced repetition, a scheduler that adapts to how fast you recall, varied context clues, and contrastive learning, in personal crosswords. Free on iPhone and iPad."
 ---
 <section class="home-hero">
   <div class="hero-copy">
@@ -46,6 +46,21 @@ description: "Build an English vocabulary you can actually recall. WordLab turns
   </div>
 </section>
 
+<section class="learning-loop" aria-labelledby="method-title">
+  <p class="eyebrow">Why it works</p>
+  <h2 id="method-title">Words that come to mind<br>when you speak and write.</h2>
+  <p class="method-lede">Most vocabulary apps teach you to recognize words. WordLab combines five techniques so the words come to you on their own. Leave any one out and the words stay stuck in the app.</p>
+  <div class="loop-grid">
+    <article><span class="step-number">01</span><h3>Active recall</h3><p>You type the word from a sentence and its meaning. No multiple choice, so you learn to produce the word, not just recognize it.</p></article>
+    <article><span class="step-number">02</span><h3>Spaced repetition</h3><p>Every learned word comes back just before you'd forget it, so your vocabulary keeps growing without more daily time.</p></article>
+    <article><span class="step-number">03</span><h3>Speed-aware scheduling</h3><p>WordLab times each recall. Slow answers come back sooner until the word arrives quickly enough to use mid-sentence.</p></article>
+    <article><span class="step-number">04</span><h3>Varied clues</h3><p>Each review uses a differently worded sentence, so the word connects to real situations, not one memorized prompt.</p></article>
+    <article><span class="step-number">05</span><h3>Contrastive learning</h3><p>Drills separate close words like amiable and genial, or prudent and judicious, so you pick the right one. (Premium)</p></article>
+    <article><span class="step-number">+</span><h3>Pictures and order</h3><p>Every word has an illustration of its meaning, and new words arrive roughly from most common to rarest.</p></article>
+  </div>
+  <p><a class="text-link" href="/how-it-works/">Read how the method works <span aria-hidden="true">→</span></a></p>
+</section>
+
 <section class="feature-duo">
   <div class="sky-preview">
     <video controls muted playsinline preload="none" poster="/img/sky-zoom-poster.jpg" width="600" height="1298" aria-label="Explore WordLab’s sky of learned words"><source src="/img/sky-zoom-20260930.mp4" type="video/mp4"></video>
@@ -67,6 +82,7 @@ description: "Build an English vocabulary you can actually recall. WordLab turns
 <section class="home-faq" aria-labelledby="faq-title">
   <h2 id="faq-title">A few things to know.</h2>
   <details><summary>Is WordLab free?</summary><p>Yes. Crosswords, spaced repetition, word cards, and your word sky are free, with no ads. Optional Premium adds contrastive learning drills and more companion designs. <a href="/premium/">See Premium details.</a></p></details>
+  <details><summary>How is WordLab different from other vocabulary apps?</summary><p>It is built so new words come to mind while you think, speak, and write, not just when you see them. It combines active recall, spaced repetition, a scheduler that adapts to how fast you recall each word, differently worded clues for each word, and contrastive learning between close synonyms. <a href="/how-it-works/">How it works.</a></p></details>
   <details><summary>Who is it for?</summary><p>English-speaking readers, writers, word-game fans, and advanced English learners who want more precise words at their fingertips. WordLab is available on iPhone and iPad.</p></details>
   <details><summary>Is this a daily crossword?</summary><p>Your crosswords are generated from your vocabulary and review schedule. You can play whenever you like; you aren’t limited to one shared puzzle per day.</p></details>
 </section>
@@ -80,9 +96,9 @@ description: "Build an English vocabulary you can actually recall. WordLab turns
 
 <section class="home-reading">
   <h2>For the curious</h2>
-  <div class="reading-links"><a href="/wordlab-vs-vocabulary/">WordLab vs. Vocabulary <span aria-hidden="true">↗</span></a><a href="/blog/">Ideas for learning better <span aria-hidden="true">↗</span></a></div>
+  <div class="reading-links"><a href="/how-it-works/">How WordLab works <span aria-hidden="true">↗</span></a><a href="/wordlab-vs-vocabulary/">WordLab vs. Vocabulary <span aria-hidden="true">↗</span></a><a href="/blog/">Ideas for learning better <span aria-hidden="true">↗</span></a></div>
 </section>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://wordlab.nz/#app","name":"WordLab: Vocabulary Builder","operatingSystem":"iOS, iPadOS","applicationCategory":"EducationalApplication","description":"An English vocabulary app with personalized crosswords, spaced repetition, illustrated word cards, and optional Premium contrastive learning drills.","url":"https://wordlab.nz/","downloadUrl":"{{ site.appstore }}","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free download and core vocabulary practice; optional Premium purchases."},"screenshot":"https://wordlab.nz/img/shot-board.jpg"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://wordlab.nz/#app","name":"WordLab: Vocabulary Builder","operatingSystem":"iOS, iPadOS","applicationCategory":"EducationalApplication","description":"An English vocabulary app for iPhone and iPad that makes new words second nature. Personalized crosswords combine typed active recall from varied sentence clues, spaced repetition, a scheduler that adapts to how fast each word is recalled, illustrated word cards, and optional Premium contrastive learning drills between close synonyms. About 20,000 words, introduced roughly from most common to rarest. No ads.","url":"https://wordlab.nz/","downloadUrl":"{{ site.appstore }}","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free download and core vocabulary practice; optional Premium purchases."},"screenshot":"https://wordlab.nz/img/shot-board.jpg"}
 </script>

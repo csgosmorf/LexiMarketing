@@ -35,7 +35,7 @@ The goal is for *rankle* to become available when you want to describe a remark 
 <tr><th scope="row">Find the word from its meaning</th><td>Type the missing word from a sentence and meaning, with crossing letters as support.</td><td>Multiple-choice gap and synonym exercises in the creator’s hands-on comparison.</td></tr>
 <tr><th scope="row">Prepare for a new word</th><td>Illustrated introduction cards connect the word to an evocative image, definition, matching example, and connotation.</td><td>The observed practice flow tested unfamiliar words without a preceding introduction card.</td></tr>
 <tr><th scope="row">Keep track of learning</th><td>Per-word progress and due dates shape your next crossword. A correct answer does not end future review.</td><td>Offers saved collections and practice. The creator did not find a visible known-word state or per-word review schedule in the app they tested.</td></tr>
-<tr><th scope="row">Review over time</th><td>Spaced repetition adjusts each word’s review intervals to your performance.</td><td>Its official blog says spaced repetition is built in; the scheduling mechanism is not described.</td></tr>
+<tr><th scope="row">Review over time</th><td>Spaced repetition adjusts each word’s review intervals to your performance, including how fast you recalled it: slow answers come back sooner until recall is quick.</td><td>Its official blog says spaced repetition is built in; the scheduling mechanism is not described.</td></tr>
 <tr><th scope="row">Use the right synonym</th><td>Premium matching, typing, and nuance drills train differences within groups of confusable words.</td><td>Multiple-choice synonym matching in the hands-on comparison; its site also describes synonyms and related words.</td></tr>
 <tr><th scope="row">See what you have learned</th><td>A learned-word list and word sky: words become stars, and practiced contrasts form constellations.</td><td>Its site describes saved words, collections, and streaks.</td></tr>
 <tr><th scope="row">Discover vocabulary casually</th><td>About 20,000 words to explore through a personalized learning sequence and puzzles.</td><td>Word browsing, difficulty and topic choices, pronunciation, examples, widgets, and reminders.</td></tr>
@@ -45,7 +45,7 @@ The goal is for *rankle* to become available when you want to describe a remark 
 
 ## Built for lasting vocabulary expansion
 
-WordLab keeps a learning history for each word and uses it to decide what needs practice. A correct answer earns a longer review interval; needing to reveal a forgotten word brings it back sooner. The word stays in the learning system after an initial success. That makes vocabulary expansion an ongoing process of strengthening and maintaining what you learn.
+WordLab keeps a learning history for each word and uses it to decide what needs practice. A correct answer earns a longer review interval; needing to reveal a forgotten word brings it back sooner. It also times each recall: a word you remember slowly returns sooner than one you remember instantly, because a word that takes ten seconds to come to mind can’t be used in conversation. [How the method works](/how-it-works/). The word stays in the learning system after an initial success. That makes vocabulary expansion an ongoing process of strengthening and maintaining what you learn.
 
 There is a research reason to emphasize retrieval: a [vocabulary-learning experiment by Karpicke and Roediger](https://pubmed.ncbi.nlm.nih.gov/18276894/) found that continued testing after an initial correct answer improved delayed recall, whereas continued study alone did not. That supports the principle behind repeated retrieval; it does not establish a measured advantage for either app.
 
@@ -67,7 +67,7 @@ WordLab Premium trains those distinctions through illustrated matching and typin
 
 Vocabulary’s [August 2026 blog post](https://vocabulary.monkeytaps.app/blogs/7-proven-ways-to-build-your-vocabulary-fast) says it has built-in spaced repetition. Its public descriptions do not explain how review intervals adapt to individual performance or how it represents knowledge of each word. In the creator’s hands-on use, there was also no visible known-word state or per-word review schedule. Those observations do not tell us what may happen behind the scenes; the level of personalization remains unclear from the public documentation.
 
-WordLab’s concrete distinction is the combination of adaptive per-word review schedules, typed recall from changing contexts, visual introductions, and contrastive nuance training.
+WordLab’s concrete distinction is the combination of adaptive per-word review schedules that respond to recall speed, typed recall from changing contexts, visual introductions, and contrastive nuance training.
 
 ## Which should you choose?
 

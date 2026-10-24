@@ -278,6 +278,7 @@ th, td { text-align: left; padding: 6px 22px 6px 0; border-bottom: 1px solid rgb
 .step-number { color: #9d90c3; font-family: Georgia, serif; font-size: 24px; }
 .loop-grid h3 { font-size: 21px; margin: 10px 0; }
 .loop-grid p { margin: 0; }
+.method-lede { color: #bfbacf; font-size: 17px; max-width: 640px; }
 .feature-duo { display: grid; grid-template-columns: .8fr 1fr; gap: 80px; align-items: center; padding: 30px 50px 50px; border-radius: 24px; background: linear-gradient(140deg, #211e35, #141322); border: 1px solid #ffffff12; }
 .sky-preview { text-align: center; }
 .sky-preview video { width: 230px; max-width: 100%; height: auto; border-radius: 24px; display: block; margin: auto; border: 1px solid #ffffff20; }
