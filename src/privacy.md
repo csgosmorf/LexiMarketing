@@ -23,6 +23,18 @@ This policy describes what WordLab: Vocabulary Builder collects, how it is used,
 - **Device data in reports:** bug and feedback reports include basic device model and OS version to help us fix problems.
 - **Push token:** if you enable multiplayer invitations, a notification token for your device.
 
+## On Android
+
+The Android app collects the same categories as above, with these differences:
+
+- **Account identifiers:** an anonymous authentication token created on first launch. iCloud is not used. If you choose **Sign in with Google**, our authentication provider (Firebase) also receives your Google account's email address and name so the account can be restored on a reinstall or a new phone; we never see your Google password.
+- **Purchases:** handled by Google Play, which gives us a purchase token, the product, and the subscription's status and renewal date so we can confirm it. We never receive your payment details. Subscriptions are managed in the Google Play app (Profile → Payments & subscriptions → Subscriptions).
+- **Voice answers:** if you answer a clue with the microphone, your device's speech-recognition service turns the speech into text. WordLab keeps only the recognized words (at most three) and their timing; audio is never stored or sent to us.
+- **Crash reports:** if the app crashes, a crash report (the technical trace, device model, OS version and an installation identifier) is sent to Firebase Crashlytics.
+- **No push token** is collected on Android.
+- **Service providers:** Google Firebase (database, file storage, cloud functions, authentication, crash reporting), Google Play (purchases) and, if you choose it, Google Sign-In.
+- **Deleting your account:** Settings → Account → Delete Account & Data in the app, or see [Delete your account](/delete-account/).
+
 ## What other players can see
 
 If you appear on the leaderboard or make your profile public, other users can see your display name, avatar, gameplay statistics, streaks, achievements, activity summary, presence (recently online), bio, and city if you entered one. Public profiles are also discoverable by name search. Comments you post on profiles are visible to viewers of that profile. Friend codes you share identify your account or a profile to whoever holds the code. You can make your profile private and disable direct messages in profile settings.
@@ -41,7 +53,7 @@ WordLab uses Apple iCloud/CloudKit (progress sync, identity), Apple StoreKit (pu
 
 ## Retention and deletion
 
-Gameplay and profile data is kept while your account is active. Deleting a profile in the app withdraws its leaderboard entry, directory listing, and friend code. Old comments and messages may persist in conversations they were part of. To request deletion of all data associated with your account, contact lexidevsup@gmail.com from the device in question so we can locate your anonymous identifiers; we will delete server-side data within 30 days except where retention is legally required (for example, records of abuse reports).
+Gameplay and profile data is kept while your account is active. Deleting a profile in the app withdraws its leaderboard entry, directory listing, and friend code. Old comments and messages may persist in conversations they were part of. To request deletion of all data associated with your account, contact lexidevsup@gmail.com from the device in question so we can locate your anonymous identifiers (on Android, Settings → Account → Delete Account & Data writes the request for you; see [Delete your account](/delete-account/)); we will delete server-side data within 30 days except where retention is legally required (for example, records of abuse reports).
 
 ## Children
 
